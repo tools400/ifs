@@ -1,0 +1,234 @@
+     /* =================================================================== */
+     /*                                                                     */
+     /*  Documentation:                                                     */
+     /*                                                                     */
+     /*  Utility . . . : IFS                                                */
+     /*  Object  . . . : A_INSTALL  (PGM)                                   */
+     /*  Source member : A_INSTALL                                          */
+     /*  Source type . : CLLE                                               */
+     /*  Description   : IFS - Installer                                    */
+     /*  Author  . . . : Thomas Raddatz   <thomas.raddatz@tools400.de>      */
+     /*                                                                     */
+     /* =================================================================== */
+     /*                                                                     */
+     /*  This software is free software, you can redistribute it and/or     */
+     /*  modify it under the terms of the GNU General Public License (GPL)  */
+     /*  as published by the Free Software Foundation.                      */
+     /*                                                                     */
+     /*  See GNU General Public License for details.                        */
+     /*          http://www.opensource.org                                  */
+     /*          http://www.opensource.org/licenses/gpl-license.html        */
+     /*                                                                     */
+     /* =================================================================== */
+     /*  History:                                                           */
+     /*                                                                     */
+     /*  Datum       Name          Änderung                                 */
+     /*  ----------  ------------  ---------------------------------------  */
+     /*                                                                     */
+     /* =================================================================== */
+     /*   >>PRE-COMPILER<<                                                  */
+     /*     >>CRTCMD<<    CRTBNDCL  PGM(QTEMP/&OB) +                        */
+     /*                             SRCFILE(&SL/&SF) SRCMBR(&SM);           */
+     /*     >>IMPORTANT<<                                                   */
+     /*       >>PARM<<    OPTION(*EVENTF);                                  */
+     /*     >>END-IMPORTANT<<                                               */
+     /*     >>EXECUTE<<                                                     */
+     /*     >>CMD<<       CALL   PGM(QTEMP/A_INSTALL) +                     */
+     /*                          PARM('*CURRENT' '&SF' '&LI' 'GER' 'L_NO'); */
+     /*     >>CMD<<       DLTPGM PGM(QTEMP/A_INSTALL);                      */
+     /*   >>END-PRE-COMPILER<<                                              */
+     /* =================================================================== */
+             PGM        PARM(&TGTRLS &SRCFILE &TOLIB  &LNG &USELIBL)
+
+             DCL        VAR(&TGTRLS   ) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&SRCFILE  ) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&TOLIB    ) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&LNG      ) TYPE(*CHAR) LEN( 3)
+             DCL        VAR(&USELIBL  ) TYPE(*CHAR) LEN(10)
+
+             DCL        VAR(&SRCLIB   ) TYPE(*CHAR) LEN(10)
+
+             DCL        VAR(&CRTMSGF  ) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&MSGF     ) TYPE(*CHAR) LEN(10) VALUE('IFS')
+
+             DCL        VAR(&BNDLIBL  ) TYPE(*CHAR) LEN(10) VALUE('*LIBL')
+
+             CHGVAR     VAR(&SRCLIB) VALUE(&TOLIB   )
+
+     /* -------------------------------- */
+     /*  Delete old objects              */
+     /* -------------------------------- */
+             DLTMOD     MODULE(&TOLIB/IFSR01)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_01)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_02)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_03)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_04)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_05)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_06)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_07)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_08)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_09)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_10)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_30)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_31)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_32)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_33)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_98)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMOD     MODULE(&TOLIB/IFSTEST_99)
+             MONMSG     MSGID(CPF2105)
+
+             DLTSRVPGM  SRVPGM(&TOLIB/IFS)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_01)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_02)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_03)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_04)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_05)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_06)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_07)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_08)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_09)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_10)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_30)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_31)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_32)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_33)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_98)
+             MONMSG     MSGID(CPF2105)
+
+             DLTPGM     PGM(&TOLIB/IFSTEST_99)
+             MONMSG     MSGID(CPF2105)
+
+             DLTMSGF    MSGF(&TOLIB/&MSGF)
+             MONMSG     MSGID(CPF2105)
+
+             RMVMSG     PGMQ(*SAME (*)) CLEAR(*ALL)
+
+     /* -------------------------------- */
+     /*  Create message file             */
+     /* -------------------------------- */
+             IF         COND(&LNG *EQ 'ENG') THEN(DO)
+                CHGVAR     VAR(&CRTMSGF) VALUE('A_MSG_ENG')
+             ENDDO
+             ELSE       CMD(DO)
+                CHGVAR     VAR(&CRTMSGF) VALUE('A_MSG_GER')
+             ENDDO
+
+             CRTMSGF    MSGF(&TOLIB/&MSGF) +
+                          TEXT('Export Journal Entries')
+
+             CRTCLPGM   PGM(QTEMP/&CRTMSGF) +
+                          SRCFILE(&SRCLIB/&SRCFILE) SRCMBR(*PGM) +
+                          OPTION(*LSTDBG) +
+                          TGTRLS(&TGTRLS)
+             DLTSPLF    FILE(&CRTMSGF  ) JOB(*) SPLNBR(*LAST)
+             MONMSG     MSGID(CPF0000)
+
+             CALL       PGM(QTEMP/&CRTMSGF) PARM(&TOLIB)
+             DLTPGM     PGM(QTEMP/&CRTMSGF)
+
+     /* -------------------------------- */
+     /*  Use *LIBL at runtime?           */
+     /* -------------------------------- */
+             IF         COND(&USELIBL *NE 'L_NO') THEN(DO)
+                CHGVAR     VAR(&BNDLIBL) VALUE(&TOLIB)
+             ENDDO
+
+     /* -------------------------------- */
+     /*  Create modules                  */
+     /* -------------------------------- */
+             CRTRPGMOD  MODULE(&TOLIB/IFSR01) +
+                          SRCFILE(&SRCLIB/&SRCFILE) SRCMBR(*MODULE) +
+                          DBGVIEW(*LIST) TRUNCNBR(*NO) +
+                          TGTRLS(&TGTRLS)
+             DLTSPLF    FILE(IFSR01  ) JOB(*) SPLNBR(*LAST)
+             MONMSG     MSGID(CPF0000)
+
+     /* -------------------------------- */
+     /*  Create service programs         */
+     /* -------------------------------- */
+             CRTSRVPGM  SRVPGM(&TOLIB/IFS) +
+                          MODULE(&TOLIB/IFSR01) +
+                          EXPORT(*SRCFILE) +
+                          SRCFILE(&SRCLIB/&SRCFILE) +
+                          SRCMBR(IFS) +
+                          ACTGRP(*CALLER) +
+                          BNDDIR(QC2LE) +
+                          BNDSRVPGM(&BNDLIBL/BASICS1) +
+                          DETAIL(*BASIC) +
+                          TEXT('IFS File API') +
+                          TGTRLS(&TGTRLS)
+             DLTSPLF    FILE(IFS) JOB(*) SPLNBR(*LAST)
+             MONMSG     MSGID(CPF0000)
+
+     /* -------------------------------- */
+     /*  Create test programs            */
+     /* -------------------------------- */
+
+     /* -------------------------------- */
+     /*  Delete obsolete objects         */
+     /* -------------------------------- */
+             DLTMOD     MODULE(&TOLIB/IFSR01)
+
+             ENDPGM

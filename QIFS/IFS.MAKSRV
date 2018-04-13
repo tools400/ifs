@@ -1,0 +1,378 @@
+/* ==================================================== */
+/* >>PRE-COMPILER<<                                     */
+/*                                                      */
+/*   >>CRTCMD<< CRTSRVPGM    SRVPGM(&LI/&OB);           */
+/*                                                      */
+/*   >>LINK<<                                           */
+/*     >>PARM<< MODULE( +                               */
+/*                     &LI/IFSR01    +                  */
+/*                                   );                 */
+/*     >>PARM<< BNDDIR(*LIBL/QC2LE   );                 */
+/*     >>PARM<< BNDSRVPGM(*LIBL/BASICS1   );            */
+/*     >>PARM<< EXPORT(*SRCFILE);                       */
+/*     >>PARM<< SRCFILE(&LI/QIFS);                      */
+/*     >>PARM<< SRCMBR(&OB);                            */
+/*     >>PARM<< USRPRF(*USER);                          */
+/*     >>PARM<< ACTGRP(*CALLER);                        */
+/*     >>PARM<< DETAIL(*BASIC);                         */
+/*     >>PARM<< TGTRLS(V6R1M0);                         */
+/*     >>PARM<< TEXT('Tools/400 - IFS Stream +          */
+/*                    Files Procedures');               */
+/*   >>END-LINK<<                                       */
+/*                                                      */
+/*   >>EXECUTE<<                                        */
+/*                                                      */
+/* >>END-PRE-COMPILER<<                                 */
+/* ==================================================== */
+
+STRPGMEXP PGMLVL(*CURRENT) SIGNATURE('Version 1.9')
+  EXPORT SYMBOL('IFSR01_f_closeIfsFile')
+  EXPORT SYMBOL('IFSR01_f_deleteIfsFile')
+  EXPORT SYMBOL('IFSR01_f_fixIfsDir')
+  EXPORT SYMBOL('IFSR01_f_fixIfsPath')
+  EXPORT SYMBOL('IFSR01_f_getIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_isIfsFile')
+  EXPORT SYMBOL('IFSR01_f_isIfsDir')
+  EXPORT SYMBOL('IFSR01_f_moveIfsFile')
+  EXPORT SYMBOL('IFSR01_f_openIfsFile')
+  EXPORT SYMBOL('IFSR01_f_readIfsFile')
+  EXPORT SYMBOL('IFSR01_f_renameIfsFile')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsFileFromPath')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsDirFromPath')
+  EXPORT SYMBOL('IFSR01_f_seekIfsFile')
+  EXPORT SYMBOL('IFSR01_f_chgIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_writeIfsFile')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   with V1.1           */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_readLineIfsFile')
+  EXPORT SYMBOL('IFSR01_f_writeLineIfsFile')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   with V1.2           */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_readIfsDir')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   with V1.3           */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_rtvIfsFileExtFromPath')
+  EXPORT SYMBOL('IFSR01_f_rmvIfsFileExtFromPath')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   with V1.4           */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_getIfsFileCrtTime')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   with V1.5           */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_getIfsFileDataChgTime')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   with V1.8           */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_getIfsTmpPath')
+  EXPORT SYMBOL('IFSR01_f_crtIfsDir')
+  EXPORT SYMBOL('IFSR01_f_getIfsFileSizeH')
+  EXPORT SYMBOL('IFSR01_f_getIfsFileID')
+  EXPORT SYMBOL('IFSR01_f_getIfsFileIDH')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   with V1.9           */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_getIfsCurDir')
+  EXPORT SYMBOL('IFSR01_f_chgIfsCurDir')
+  EXPORT SYMBOL('IFSR01_f_dltIfsDir')
+  EXPORT SYMBOL('IFSR01_f_isIfsDirEmpty')
+
+ENDPGMEXP
+
+STRPGMEXP PGMLVL(*PRV    ) SIGNATURE('Version 1.8')
+  EXPORT SYMBOL('IFSR01_f_closeIfsFile')
+  EXPORT SYMBOL('IFSR01_f_deleteIfsFile')
+  EXPORT SYMBOL('IFSR01_f_fixIfsDir')
+  EXPORT SYMBOL('IFSR01_f_fixIfsPath')
+  EXPORT SYMBOL('IFSR01_f_getIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_isIfsFile')
+  EXPORT SYMBOL('IFSR01_f_isIfsDir')
+  EXPORT SYMBOL('IFSR01_f_moveIfsFile')
+  EXPORT SYMBOL('IFSR01_f_openIfsFile')
+  EXPORT SYMBOL('IFSR01_f_readIfsFile')
+  EXPORT SYMBOL('IFSR01_f_renameIfsFile')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsFileFromPath')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsDirFromPath')
+  EXPORT SYMBOL('IFSR01_f_seekIfsFile')
+  EXPORT SYMBOL('IFSR01_f_chgIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_writeIfsFile')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   with V1.1           */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_readLineIfsFile')
+  EXPORT SYMBOL('IFSR01_f_writeLineIfsFile')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   with V1.2           */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_readIfsDir')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   with V1.3           */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_rtvIfsFileExtFromPath')
+  EXPORT SYMBOL('IFSR01_f_rmvIfsFileExtFromPath')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   with V1.4           */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_getIfsFileCrtTime')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   with V1.5           */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_getIfsFileDataChgTime')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   with V1.8           */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_getIfsTmpPath')
+  EXPORT SYMBOL('IFSR01_f_crtIfsDir')
+  EXPORT SYMBOL('IFSR01_f_getIfsFileSizeH')
+  EXPORT SYMBOL('IFSR01_f_getIfsFileID')
+  EXPORT SYMBOL('IFSR01_f_getIfsFileIDH')
+
+ENDPGMEXP
+
+STRPGMEXP PGMLVL(*PRV    ) SIGNATURE('Version 1.5')
+  EXPORT SYMBOL('IFSR01_f_closeIfsFile')
+  EXPORT SYMBOL('IFSR01_f_deleteIfsFile')
+  EXPORT SYMBOL('IFSR01_f_fixIfsDir')
+  EXPORT SYMBOL('IFSR01_f_fixIfsPath')
+  EXPORT SYMBOL('IFSR01_f_getIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_isIfsFile')
+  EXPORT SYMBOL('IFSR01_f_isIfsDir')
+  EXPORT SYMBOL('IFSR01_f_moveIfsFile')
+  EXPORT SYMBOL('IFSR01_f_openIfsFile')
+  EXPORT SYMBOL('IFSR01_f_readIfsFile')
+  EXPORT SYMBOL('IFSR01_f_renameIfsFile')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsFileFromPath')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsDirFromPath')
+  EXPORT SYMBOL('IFSR01_f_seekIfsFile')
+  EXPORT SYMBOL('IFSR01_f_chgIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_writeIfsFile')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   since V1.0          */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_readLineIfsFile')
+  EXPORT SYMBOL('IFSR01_f_writeLineIfsFile')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   since V1.1          */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_readIfsDir')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   since V1.2          */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_rtvIfsFileExtFromPath')
+  EXPORT SYMBOL('IFSR01_f_rmvIfsFileExtFromPath')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   since V1.3          */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_getIfsFileCrtTime')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   since V1.4          */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_getIfsFileDataChgTime')
+
+ENDPGMEXP
+
+STRPGMEXP PGMLVL(*PRV    ) SIGNATURE('Version 1.4')
+  EXPORT SYMBOL('IFSR01_f_closeIfsFile')
+  EXPORT SYMBOL('IFSR01_f_deleteIfsFile')
+  EXPORT SYMBOL('IFSR01_f_fixIfsDir')
+  EXPORT SYMBOL('IFSR01_f_fixIfsPath')
+  EXPORT SYMBOL('IFSR01_f_getIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_isIfsFile')
+  EXPORT SYMBOL('IFSR01_f_isIfsDir')
+  EXPORT SYMBOL('IFSR01_f_moveIfsFile')
+  EXPORT SYMBOL('IFSR01_f_openIfsFile')
+  EXPORT SYMBOL('IFSR01_f_readIfsFile')
+  EXPORT SYMBOL('IFSR01_f_renameIfsFile')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsFileFromPath')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsDirFromPath')
+  EXPORT SYMBOL('IFSR01_f_seekIfsFile')
+  EXPORT SYMBOL('IFSR01_f_chgIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_writeIfsFile')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   since V1.0          */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_readLineIfsFile')
+  EXPORT SYMBOL('IFSR01_f_writeLineIfsFile')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   since V1.1          */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_readIfsDir')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   since V1.2          */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_rtvIfsFileExtFromPath')
+  EXPORT SYMBOL('IFSR01_f_rmvIfsFileExtFromPath')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   since V1.3          */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_getIfsFileCrtTime')
+
+ENDPGMEXP
+
+STRPGMEXP PGMLVL(*PRV    ) SIGNATURE('Version 1.3')
+  EXPORT SYMBOL('IFSR01_f_closeIfsFile')
+  EXPORT SYMBOL('IFSR01_f_deleteIfsFile')
+  EXPORT SYMBOL('IFSR01_f_fixIfsDir')
+  EXPORT SYMBOL('IFSR01_f_fixIfsPath')
+  EXPORT SYMBOL('IFSR01_f_getIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_isIfsFile')
+  EXPORT SYMBOL('IFSR01_f_isIfsDir')
+  EXPORT SYMBOL('IFSR01_f_moveIfsFile')
+  EXPORT SYMBOL('IFSR01_f_openIfsFile')
+  EXPORT SYMBOL('IFSR01_f_readIfsFile')
+  EXPORT SYMBOL('IFSR01_f_renameIfsFile')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsFileFromPath')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsDirFromPath')
+  EXPORT SYMBOL('IFSR01_f_seekIfsFile')
+  EXPORT SYMBOL('IFSR01_f_chgIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_writeIfsFile')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   since V1.0          */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_readLineIfsFile')
+  EXPORT SYMBOL('IFSR01_f_writeLineIfsFile')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   since V1.1          */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_readIfsDir')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   since V1.2          */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_rtvIfsFileExtFromPath')
+  EXPORT SYMBOL('IFSR01_f_rmvIfsFileExtFromPath')
+
+ENDPGMEXP
+
+STRPGMEXP PGMLVL(*PRV    ) SIGNATURE('Version 1.2')
+  EXPORT SYMBOL('IFSR01_f_closeIfsFile')
+  EXPORT SYMBOL('IFSR01_f_deleteIfsFile')
+  EXPORT SYMBOL('IFSR01_f_fixIfsDir')
+  EXPORT SYMBOL('IFSR01_f_fixIfsPath')
+  EXPORT SYMBOL('IFSR01_f_getIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_isIfsFile')
+  EXPORT SYMBOL('IFSR01_f_isIfsDir')
+  EXPORT SYMBOL('IFSR01_f_moveIfsFile')
+  EXPORT SYMBOL('IFSR01_f_openIfsFile')
+  EXPORT SYMBOL('IFSR01_f_readIfsFile')
+  EXPORT SYMBOL('IFSR01_f_renameIfsFile')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsFileFromPath')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsDirFromPath')
+  EXPORT SYMBOL('IFSR01_f_seekIfsFile')
+  EXPORT SYMBOL('IFSR01_f_chgIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_writeIfsFile')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   since V1.0          */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_readLineIfsFile')
+  EXPORT SYMBOL('IFSR01_f_writeLineIfsFile')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   since V1.1          */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_readIfsDir')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsFileExtFromPath')
+  EXPORT SYMBOL('IFSR01_f_rmvIfsFileExtFromPath')
+
+ENDPGMEXP
+
+STRPGMEXP PGMLVL(*PRV    ) SIGNATURE('Version 1.1')
+  EXPORT SYMBOL('IFSR01_f_closeIfsFile')
+  EXPORT SYMBOL('IFSR01_f_deleteIfsFile')
+  EXPORT SYMBOL('IFSR01_f_fixIfsDir')
+  EXPORT SYMBOL('IFSR01_f_fixIfsPath')
+  EXPORT SYMBOL('IFSR01_f_getIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_isIfsFile')
+  EXPORT SYMBOL('IFSR01_f_isIfsDir')
+  EXPORT SYMBOL('IFSR01_f_moveIfsFile')
+  EXPORT SYMBOL('IFSR01_f_openIfsFile')
+  EXPORT SYMBOL('IFSR01_f_readIfsFile')
+  EXPORT SYMBOL('IFSR01_f_renameIfsFile')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsFileFromPath')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsDirFromPath')
+  EXPORT SYMBOL('IFSR01_f_seekIfsFile')
+  EXPORT SYMBOL('IFSR01_f_chgIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_writeIfsFile')
+
+  /* --------------------- */
+  /*   New procedures      */
+  /*   since V1.0          */
+  /* --------------------- */
+  EXPORT SYMBOL('IFSR01_f_readLineIfsFile')
+  EXPORT SYMBOL('IFSR01_f_writeLineIfsFile')
+
+ENDPGMEXP
+
+STRPGMEXP PGMLVL(*PRV    )
+  EXPORT SYMBOL('IFSR01_f_closeIfsFile')
+  EXPORT SYMBOL('IFSR01_f_deleteIfsFile')
+  EXPORT SYMBOL('IFSR01_f_fixIfsDir')
+  EXPORT SYMBOL('IFSR01_f_fixIfsPath')
+  EXPORT SYMBOL('IFSR01_f_getIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_isIfsFile')
+  EXPORT SYMBOL('IFSR01_f_isIfsDir')
+  EXPORT SYMBOL('IFSR01_f_moveIfsFile')
+  EXPORT SYMBOL('IFSR01_f_openIfsFile')
+  EXPORT SYMBOL('IFSR01_f_readIfsFile')
+  EXPORT SYMBOL('IFSR01_f_renameIfsFile')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsFileFromPath')
+  EXPORT SYMBOL('IFSR01_f_rtvIfsDirFromPath')
+  EXPORT SYMBOL('IFSR01_f_seekIfsFile')
+  EXPORT SYMBOL('IFSR01_f_chgIfsFileSize')
+  EXPORT SYMBOL('IFSR01_f_writeIfsFile')
+ENDPGMEXP
