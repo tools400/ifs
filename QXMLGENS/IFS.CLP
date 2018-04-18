@@ -8,6 +8,8 @@
 /* -------------------------------------------------------------------------- */
              XMLGENINC  XINCLUDE(*YES)
 
+             XMLGENVRS XSRCFILE(QIFS) XSRCLIB(TOOLS400) XSRCMBR(COPYRIGHT)
+
              XMLGENCND  XMSG('Select language (GER, ENG)') +
                           XVALUES(GER ENG) XVAR(&LANG)
 
@@ -19,17 +21,17 @@
 /* ---------------------------------- */
 /*  Deploy source member              */
 /* ---------------------------------- */
+             XMLGENMBR  XMBR(A_INSTALL  ) XMBRATR(CLLE  ) +
+                          XFROMSRCF(QIFS      ) XFROMSRCL(TOOLS400   ) +
+                          XTOSRCF(QIFS      ) XOBJTYPE(*PGM) +
+                          XGENCRT(*NO) XPARAM(*BLANK)
+
              XMLGENMBR  XMBR(A_MSG_ENG  ) XMBRATR(CLP   ) +
                           XFROMSRCF(QIFS      ) XFROMSRCL(TOOLS400   ) +
                           XTOSRCF(QIFS      ) XOBJTYPE(*PGM) +
                           XGENCRT(*NO) XPARAM(*BLANK)
 
              XMLGENMBR  XMBR(A_MSG_GER  ) XMBRATR(CLP   ) +
-                          XFROMSRCF(QIFS      ) XFROMSRCL(TOOLS400   ) +
-                          XTOSRCF(QIFS      ) XOBJTYPE(*PGM) +
-                          XGENCRT(*NO) XPARAM(*BLANK)
-
-             XMLGENMBR  XMBR(A_INSTALL  ) XMBRATR(CLLE  ) +
                           XFROMSRCF(QIFS      ) XFROMSRCL(TOOLS400   ) +
                           XTOSRCF(QIFS      ) XOBJTYPE(*PGM) +
                           XGENCRT(*NO) XPARAM(*BLANK)
