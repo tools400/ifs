@@ -15,7 +15,7 @@
 /*     >>PARM<< USRPRF(*USER);                          */
 /*     >>PARM<< ACTGRP(*CALLER);                        */
 /*     >>PARM<< DETAIL(*BASIC);                         */
-/*     >>PARM<< TGTRLS(V6R1M0);                         */
+/*     >>PARM<< TGTRLS(V7R3M0);                         */
 /*     >>PARM<< TEXT('Tools/400 - IFS Stream +          */
 /*                    Files Procedures');               */
 /*   >>END-LINK<<                                       */

@@ -51,7 +51,7 @@
       appblddate CDATA #REQUIRED
      >
      ]>
-<upload  appname="IFS"  appauthor="Thomas Raddatz"  appblddate=" 4/19/2018">
+<upload  appname="IFS"  appauthor="Thomas Raddatz"  appblddate="12/08/2025">
 <install_instructions><![CDATA[
      *----------------------------------------------------------------      ------
      *  1. Upload entire XML to your AS/400 to a source file 112 long, into any mbr
@@ -1295,7 +1295,7 @@ mbrtext =  "IFS - Installer                                   "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
      /* =================================================================== */
      /*                                                                     */
@@ -1321,7 +1321,7 @@ srccssid=  "00273">
      /* =================================================================== */
      /*  History:                                                           */
      /*                                                                     */
-     /*  Datum       Name          Änderung                                 */
+     /*  Datum       Name           nderung                                 */
      /*  ----------  ------------  ---------------------------------------  */
      /*                                                                     */
      /* =================================================================== */
@@ -1544,7 +1544,7 @@ mbrtext =  "MSG: IFS1000 - IFS1031                            "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
      /*-----------------------------------------------------------------------*/
      /* STRPREPRC Compile Options:                                            */
@@ -1564,7 +1564,7 @@ srccssid=  "00273">
              DCL        VAR(&LI) TYPE(*CHAR) LEN(10)
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1000                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1000                    */
      /* &1[1000] File '&2' has not been opend. Error code &3.       */
      /* ----------------------------------------------------------- */
 
@@ -1590,7 +1590,7 @@ e &3 when attemting to open file ''&2''. The error text is: ''&4''.'  +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1001                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1001                    */
      /* &1[1001] File '&2' has not been closed. Error code &3.      */
      /* ----------------------------------------------------------- */
 
@@ -1616,7 +1616,7 @@ de &3 when attemting to close file ''&2''. The error text is: ''&4''.'+
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1002                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1002                    */
      /* &1[1002] Data has not been written to file '&2'. Error code */
      /* ----------------------------------------------------------- */
 
@@ -1643,7 +1643,7 @@ de &3 when attemting to write to file ''&2''. The error text is: ''&4'-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1003                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1003                    */
      /* &1[1003] File '&2' has not been moved to '&3'. Error code & */
      /* ----------------------------------------------------------- */
 
@@ -1671,7 +1671,7 @@ text is: ''&5''.'                                                     +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1004                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1004                    */
      /* &1[1004] Data has not been red from file '&2'. Error code & */
      /* ----------------------------------------------------------- */
 
@@ -1698,7 +1698,7 @@ e &3 when attemting to read from file ''&2''. The error text is: ''&4'-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1005                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1005                    */
      /* &1[1005] File '&2' has not been deleted. Error code &3.     */
      /* ----------------------------------------------------------- */
 
@@ -1725,7 +1725,7 @@ ode &3 when attemting to delete file ''&2''. The error text is: ''&4''-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1006                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1006                    */
      /* &1[1006] The size of file '&2' has not been retrieved. Erro */
      /* ----------------------------------------------------------- */
 
@@ -1753,7 +1753,7 @@ ext is: ''&4''.'                                                      +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1007                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1007                    */
      /* &1[1007] The size of file '&2' has not been changed. Error  */
      /* ----------------------------------------------------------- */
 
@@ -1781,7 +1781,7 @@ t is: ''&4''.'                                                        +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1008                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1008                    */
      /* &1[1008] The offset of the read/write pointer of file '&2'  */
      /* ----------------------------------------------------------- */
 
@@ -1811,7 +1811,7 @@ de &3 when attemting set the new file offset. The error text is: ''&4'-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1009                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1009                    */
      /* &1[1009] File '&2' has not been renamed to '&3'. Error code */
      /* ----------------------------------------------------------- */
 
@@ -1839,7 +1839,7 @@ ror text is: ''&5''.'                                                 +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1011                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1011                    */
      /* &1[1011] Directory '&2' has not been found.                 */
      /* ----------------------------------------------------------- */
 
@@ -1863,7 +1863,7 @@ ror text is: ''&5''.'                                                 +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1012                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1012                    */
      /* &1[1012] File '&2' has not been found.                      */
      /* ----------------------------------------------------------- */
 
@@ -1887,7 +1887,7 @@ ror text is: ''&5''.'                                                 +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1013                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1013                    */
      /* &1[1013] File '&2' exists.                                  */
      /* ----------------------------------------------------------- */
 
@@ -1911,7 +1911,7 @@ ror text is: ''&5''.'                                                 +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1014                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1014                    */
      /* &1[1014] File name '&2' contains invalid characters.        */
      /* ----------------------------------------------------------- */
 
@@ -1935,7 +1935,7 @@ ror text is: ''&5''.'                                                 +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1015                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1015                    */
      /* &1[1015] Directory '&2' exists.                             */
      /* ----------------------------------------------------------- */
 
@@ -1959,7 +1959,7 @@ ror text is: ''&5''.'                                                 +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1016                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1016                    */
      /* &1[1016] Buffer overflow occurred while reading from IFS fi */
      /* ----------------------------------------------------------- */
 
@@ -1986,7 +1986,7 @@ es was too small to read a line completely.'                          +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1017                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1017                    */
      /* &1[1017] Entry has not been red from directory '&2'.        */
      /* ----------------------------------------------------------- */
 
@@ -2013,7 +2013,7 @@ The error text is: ''&4''.'                                           +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1018                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1018                    */
      /* &1[1018] Attributes of file '&2' not retrieved.             */
      /* ----------------------------------------------------------- */
 
@@ -2040,7 +2040,7 @@ text is: ''&4''.'                                                     +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1019                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1019                    */
      /* &1[1019] Directory '&2' not opened.                         */
      /* ----------------------------------------------------------- */
 
@@ -2067,7 +2067,7 @@ code &3 when attempting to open directory ''&2''. The error text is: '-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1020                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1020                    */
      /* &1[1020] Directory '&2' not closed.                         */
      /* ----------------------------------------------------------- */
 
@@ -2094,7 +2094,7 @@ code &3 when attempting to open directory ''&2''. The error text is: '-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1021                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1021                    */
      /* &1[1021] The creation time of file '&2' has not been retrie */
      /* ----------------------------------------------------------- */
 
@@ -2122,7 +2122,7 @@ rror text is: ''&4''.'                                                +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1022                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1022                    */
      /* &1[1022] The time the data of file '&2' was last changed ha */
      /* ----------------------------------------------------------- */
 
@@ -2150,7 +2150,7 @@ rror text is: ''&4''.'                                                +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1023                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1023                    */
      /* &1[1023] Cannot produce temporary path name. Error code &2. */
      /* ----------------------------------------------------------- */
 
@@ -2176,7 +2176,7 @@ xt is: ''&3''.'                                                       +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1024                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1024                    */
      /* &1[1024] Invalid path name.                                 */
      /* ----------------------------------------------------------- */
 
@@ -2201,7 +2201,7 @@ Please check the directory for invalid characters and ensure it is not-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1025                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1025                    */
      /* &1[1025] Failed to retrieve permissions and privileges of f */
      /* ----------------------------------------------------------- */
 
@@ -2229,7 +2229,7 @@ e &3 when attemting to retrieve the status of file or directory ''&2''-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1026                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1026                    */
      /* &1[1026] Failed to create directory with error code &3.     */
      /* ----------------------------------------------------------- */
 
@@ -2256,7 +2256,7 @@ de &3 when attemting to create directory ''&2''. The error text is: ''-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1027                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1027                    */
      /* &1[1027] Could not set permissions for directory. Error cod */
      /* ----------------------------------------------------------- */
 
@@ -2283,7 +2283,7 @@ or text is: ''&4'''                                                   +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1028                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1028                    */
      /* &1[1028] The unique file identifier of file '&2' has not be */
      /* ----------------------------------------------------------- */
 
@@ -2311,7 +2311,7 @@ e &3 when attemting to retrieve the unique file identifier of file ''&-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1029                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1029                    */
      /* &1[1029] Failed to get the current working directory. Error */
      /* ----------------------------------------------------------- */
 
@@ -2336,7 +2336,7 @@ rror text is: ''&2''.'                                                +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1030                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1030                    */
      /* &1[1030] Failed to change the current working directory to  */
      /* ----------------------------------------------------------- */
 
@@ -2363,7 +2363,7 @@ rror text is: ''&3''.'                                                +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1031                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1031                    */
      /* &1[1031] Failed to delete IFS directory '&2'. Error code &3 */
      /* ----------------------------------------------------------- */
 
@@ -2390,7 +2390,7 @@ de &3 when attempting to delete directory ''&2''. The error text is : -
                 /*  -EOF-  */
                                                                                       /* RADD */
      /* ----------------------------------------------------------- */                /* RADD */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1032                    */                /* RADD */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1032                    */                /* RADD */
      /* &1[1032] The specified directory '&2' does already exist.   */                /* RADD */
      /* ----------------------------------------------------------- */                /* RADD */
                                                                                       /* RADD */
@@ -2414,7 +2414,7 @@ he directory does already exist.'                                     +
                 /*  -EOF-  */                                                         /* RADD */
                                                                                       /* RADD */
      /* ----------------------------------------------------------- */                /* RADD */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1033                    */                /* RADD */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1033                    */                /* RADD */
      /* &1[1033] Failed to create directory '&2'.                   */                /* RADD */
      /* ----------------------------------------------------------- */                /* RADD */
                                                                                       /* RADD */
@@ -2453,7 +2453,7 @@ mbrtext =  "MSG: IFS1000 - IFS1031                            "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
      /*-----------------------------------------------------------------------*/
      /* STRPREPRC Compile Options:                                            */
@@ -2473,20 +2473,20 @@ srccssid=  "00273">
              DCL        VAR(&LI) TYPE(*CHAR) LEN(10)
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1000                    */
-     /* &1[1000] Fehler beim Öffnen der IFS-Datei '&2' mit Fehlerco */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1000                    */
+     /* &1[1000] Fehler beim  ffnen der IFS-Datei '&2' mit Fehlerco */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1000) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1000] Fehler beim Öffnen der IFS-Datei ''&2'' mit Fehlercode &3 au-
+'&1[1000] Fehler beim  ffnen der IFS-Datei ''&2'' mit Fehlercode &3 au-
 fgetreten.'                                                           +
                 ) +
                 SECLVL(+
 '&N &N Ursache . . . . :   Bei dem Versuch die IFS Datei ''&2'' mit de-
-r Unix open()-Funktion zu öffnen ist ein Fehler mit dem Fehlercode &3 -
+r Unix open()-Funktion zu  ffnen ist ein Fehler mit dem Fehlercode &3 -
 aufgetreten. Der Fehlertext lautet: ''&4'''                           +
                 ) +
                 SEV(00) +
@@ -2501,19 +2501,19 @@ aufgetreten. Der Fehlertext lautet: ''&4'''                           +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1001                    */
-     /* &1[1001] Fehler beim Schließen der IFS-Datei '&2' aufgetret */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1001                    */
+     /* &1[1001] Fehler beim Schlie en der IFS-Datei '&2' aufgetret */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1001) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1001] Fehler beim Schließen der IFS-Datei ''&2'' aufgetreten.'    +
+'&1[1001] Fehler beim Schlie en der IFS-Datei ''&2'' aufgetreten.'    +
                 ) +
                 SECLVL(+
 '&N &N Ursache . . . . :   Bei dem Versuch die IFS-Datei ''&2'' mit de-
-r Unix close()-Funktion zu schließen ist ein Fehler mit dem Fehlercode-
+r Unix close()-Funktion zu schlie en ist ein Fehler mit dem Fehlercode-
  &3 aufgetreten. Der Fehlertext lautet: ''&4'''                       +
                 ) +
                 SEV(00) +
@@ -2528,7 +2528,7 @@ r Unix close()-Funktion zu schließen ist ein Fehler mit dem Fehlercode-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1002                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1002                    */
      /* &1[1002] Fehler beim Schreiben in die IFS-Datei '&2' aufget */
      /* ----------------------------------------------------------- */
 
@@ -2555,7 +2555,7 @@ ode &3 aufgetreten. Der Fehlertext lautet: ''&4'''                    +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1003                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1003                    */
      /* &1[1003] Fehler beim Verschieben der IFS-Datei '&2' nach '& */
      /* ----------------------------------------------------------- */
 
@@ -2585,7 +2585,7 @@ n Fehler mit dem Fehlercode &4 aufgetreten. Der Fehlertext lautet: ''&-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1004                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1004                    */
      /* &1[1004] Fehler beim Lesen aus der IFS-Datei '&2' aufgetret */
      /* ----------------------------------------------------------- */
 
@@ -2612,19 +2612,19 @@ rcode &3 aufgetreten. Der Fehlertext lautet: ''&4'''                  +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1005                    */
-     /* &1[1005] Fehler beim Löschen der IFS-Datei '&2' aufgetreten */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1005                    */
+     /* &1[1005] Fehler beim L schen der IFS-Datei '&2' aufgetreten */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1005) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1005] Fehler beim Löschen der IFS-Datei ''&2'' aufgetreten.'      +
+'&1[1005] Fehler beim L schen der IFS-Datei ''&2'' aufgetreten.'      +
                 ) +
                 SECLVL(+
 '&N &N Ursache . . . . :   Bei dem Versuch mit der Unix unlink()-Funkt-
-ion die IFS Datei ''&2'' zu löschen ist ein Fehler mit dem Fehlercode -
+ion die IFS Datei ''&2'' zu l schen ist ein Fehler mit dem Fehlercode -
 &3 aufgetreten. Der Fehlertext lautet: ''&4'''                        +
                 ) +
                 SEV(00) +
@@ -2639,20 +2639,20 @@ ion die IFS Datei ''&2'' zu löschen ist ein Fehler mit dem Fehlercode -
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1006                    */
-     /* &1[1006] Fehler beim Ermitteln der Größe der IFS-Datei '&2' */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1006                    */
+     /* &1[1006] Fehler beim Ermitteln der Gr  e der IFS-Datei '&2' */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1006) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1006] Fehler beim Ermitteln der Größe der IFS-Datei ''&2'' aufgetr-
+'&1[1006] Fehler beim Ermitteln der Gr  e der IFS-Datei ''&2'' aufgetr-
 eten.'                                                                +
                 ) +
                 SECLVL(+
 '&N &N Ursache . . . . :   Bei dem Versuch mit der Unix stat()-Funktio-
-n die Größe der IFS Datei ''&2'' zu ermitteln ist ein Fehler mit dem F-
+n die Gr  e der IFS Datei ''&2'' zu ermitteln ist ein Fehler mit dem F-
 ehlercode &3 aufgetreten. Der Fehlertext lautet: ''&4'''              +
                 ) +
                 SEV(00) +
@@ -2667,20 +2667,20 @@ ehlercode &3 aufgetreten. Der Fehlertext lautet: ''&4'''              +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1007                    */
-     /* &1[1007] Fehler beim Setzen der Größe der IFS-Datei '&2' au */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1007                    */
+     /* &1[1007] Fehler beim Setzen der Gr  e der IFS-Datei '&2' au */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1007) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1007] Fehler beim Setzen der Größe der IFS-Datei ''&2'' aufgetrete-
+'&1[1007] Fehler beim Setzen der Gr  e der IFS-Datei ''&2'' aufgetrete-
 n.'                                                                   +
                 ) +
                 SECLVL(+
 '&N &N Ursache . . . . :   Bei dem Versuch mit der Unix ftruncate()-Fu-
-nktion in die Größe der IFS Datei ''&2'' zu setzen ist ein Fehler mit -
+nktion in die Gr  e der IFS Datei ''&2'' zu setzen ist ein Fehler mit -
 dem Fehlercode &3 aufgetreten. Der Fehlertext lautet: ''&4'''         +
                 ) +
                 SEV(00) +
@@ -2695,7 +2695,7 @@ dem Fehlercode &3 aufgetreten. Der Fehlertext lautet: ''&4'''         +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1008                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1008                    */
      /* &1[1008] Fehler beim Setzen des Schreib-/Lesezeigers der IF */
      /* ----------------------------------------------------------- */
 
@@ -2726,7 +2726,7 @@ on den Schreib-/Lesezeiger der IFS Datei ''&2'' auf den neuen Offset &-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1009                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1009                    */
      /* &1[1009] Fehler beim Umbenennen der IFS-Datei '&2' nach '&3 */
      /* ----------------------------------------------------------- */
 
@@ -2756,7 +2756,7 @@ Fehler mit dem Fehlercode &4 aufgetreten. Der Fehlertext lautet: ''&5'-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1011                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1011                    */
      /* &1[1011] IFS-Verzeichnis nicht vorhanden.                   */
      /* ----------------------------------------------------------- */
 
@@ -2781,7 +2781,7 @@ er das Verzeichnis anlegen und die Anforderung wiederholen.'          +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1012                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1012                    */
      /* &1[1012] IFS-Datei nicht vorhanden.                         */
      /* ----------------------------------------------------------- */
 
@@ -2794,8 +2794,8 @@ er das Verzeichnis anlegen und die Anforderung wiederholen.'          +
                 SECLVL(+
 '&N &N Ursache . . . . :   Die angegebene Datei &2 ist nicht vorhanden-
 . &N &N Fehlerbehebung  :   Eine andere Datei angeben oder die Datei a-
-nlegen und die Anforderung wiederholen. Möglicherweise fehlt auch die -
-Berechtigung für den Zugriff auf die Datei.'                          +
+nlegen und die Anforderung wiederholen. M glicherweise fehlt auch die -
+Berechtigung f r den Zugriff auf die Datei.'                          +
                 ) +
                 SEV(00) +
                 FMT( +
@@ -2807,7 +2807,7 @@ Berechtigung für den Zugriff auf die Datei.'                          +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1013                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1013                    */
      /* &1[1013] IFS-Datei existiert.                               */
      /* ----------------------------------------------------------- */
 
@@ -2820,7 +2820,7 @@ Berechtigung für den Zugriff auf die Datei.'                          +
                 SECLVL(+
 '&N &N Ursache . . . . :   Die angegebene Datei &2 ist bereits vorhand-
 en. &N &N Fehlerbehebung  :   Einen anderen Dateinamen angeben oder di-
-e vorhandene Datei löschen und die Anforderung wiederholen.'          +
+e vorhandene Datei l schen und die Anforderung wiederholen.'          +
                 ) +
                 SEV(00) +
                 FMT( +
@@ -2832,18 +2832,18 @@ e vorhandene Datei löschen und die Anforderung wiederholen.'          +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1014                    */
-     /* &1[1014] IFS-Dateiname enthält ungültige Zeichen oder Pfada */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1014                    */
+     /* &1[1014] IFS-Dateiname enth lt ung ltige Zeichen oder Pfada */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1014) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1014] IFS-Dateiname enthält ungültige Zeichen oder Pfadangaben.'  +
+'&1[1014] IFS-Dateiname enth lt ung ltige Zeichen oder Pfadangaben.'  +
                 ) +
                 SECLVL(+
-'&N &N Ursache . . . . :   Der angegebene Dateiname &2 enthält ungülti-
+'&N &N Ursache . . . . :   Der angegebene Dateiname &2 enth lt ung lti-
 ge Zeichen oder Pfadangaben.'                                         +
                 ) +
                 SEV(00) +
@@ -2856,7 +2856,7 @@ ge Zeichen oder Pfadangaben.'                                         +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1015                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1015                    */
      /* &1[1015] IFS-Verzeichnis existiert.                         */
      /* ----------------------------------------------------------- */
 
@@ -2869,7 +2869,7 @@ ge Zeichen oder Pfadangaben.'                                         +
                 SECLVL(+
 '&N &N Ursache . . . . :   Das angegebene Verzeichnis &2 ist bereits v-
 orhanden. &N &N Fehlerbehebung  :   Einen anderen Dateinamen angeben o-
-der die vorhandene Datei löschen und die Anforderung wiederholen.'    +
+der die vorhandene Datei l schen und die Anforderung wiederholen.'    +
                 ) +
                 SEV(00) +
                 FMT( +
@@ -2881,19 +2881,19 @@ der die vorhandene Datei löschen und die Anforderung wiederholen.'    +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1016                    */
-     /* &1[1016] Pufferüberlauf beim Lesen aus der IFS Datei '&2'   */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1016                    */
+     /* &1[1016] Puffer berlauf beim Lesen aus der IFS Datei '&2'   */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1016) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1016] Pufferüberlauf beim Lesen aus der IFS Datei ''&2'''         +
+'&1[1016] Puffer berlauf beim Lesen aus der IFS Datei ''&2'''         +
                 ) +
                 SECLVL(+
 '&N &N Ursache . . . . :   Bei dem Versuch Daten aus der IFS Datei ''&-
-2'' zu lösen ist ein Pufferüberlauf aufgetreten. Die Größe des Datenpu-
+2'' zu l sen ist ein Puffer berlauf aufgetreten. Die Gr  e des Datenpu-
 ffers von &3 Byte reichte nicht aus, um ein Zeile einzulesen.'        +
                 ) +
                 SEV(00) +
@@ -2907,7 +2907,7 @@ ffers von &3 Byte reichte nicht aus, um ein Zeile einzulesen.'        +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1017                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1017                    */
      /* &1[1017] Fehler beim Lesen aus dem Verzeichnis '&2' aufgetr */
      /* ----------------------------------------------------------- */
 
@@ -2934,7 +2934,7 @@ mit dem Fehlercode &3 aufgetreten. Der Fehlertext lautet: ''&4'''     +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1018                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1018                    */
      /* &1[1018] Fehler beim Abrufen der Attribute der Datei '&2' a */
      /* ----------------------------------------------------------- */
 
@@ -2962,19 +2962,19 @@ lercode &3 aufgetreten. Der Fehlertext lautet: ''&4'''                +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1019                    */
-     /* &1[1019] Fehler beim Öffnen des Verzeichnis '&2' aufgetrete */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1019                    */
+     /* &1[1019] Fehler beim  ffnen des Verzeichnis '&2' aufgetrete */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1019) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1019] Fehler beim Öffnen des Verzeichnis ''&2'' aufgetreten.'     +
+'&1[1019] Fehler beim  ffnen des Verzeichnis ''&2'' aufgetreten.'     +
                 ) +
                 SECLVL(+
 '&N &N Ursache . . . . :   Bei dem Versuch mit der Unix opendir()-Funk-
-tion das Verzeichnis ''&2'' zu öffnen ist ein Fehler mit dem Fehlercod-
+tion das Verzeichnis ''&2'' zu  ffnen ist ein Fehler mit dem Fehlercod-
 e &3 aufgetreten. Der Fehlertext lautet: ''&4'''                      +
                 ) +
                 SEV(00) +
@@ -2989,19 +2989,19 @@ e &3 aufgetreten. Der Fehlertext lautet: ''&4'''                      +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1020                    */
-     /* &1[1020] Fehler beim Schließen des Verzeichnis '&2' aufgetr */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1020                    */
+     /* &1[1020] Fehler beim Schlie en des Verzeichnis '&2' aufgetr */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1020) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1020] Fehler beim Schließen des Verzeichnis ''&2'' aufgetreten.'  +
+'&1[1020] Fehler beim Schlie en des Verzeichnis ''&2'' aufgetreten.'  +
                 ) +
                 SECLVL(+
 '&N &N Ursache . . . . :   Bei dem Versuch mit der Unix closedir()-Fun-
-ktion das Verzeichnis ''&2'' zu schließen ist ein Fehler mit dem Fehle-
+ktion das Verzeichnis ''&2'' zu schlie en ist ein Fehler mit dem Fehle-
 rcode &3 aufgetreten. Der Fehlertext lautet: ''&4'''                  +
                 ) +
                 SEV(00) +
@@ -3016,7 +3016,7 @@ rcode &3 aufgetreten. Der Fehlertext lautet: ''&4'''                  +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1021                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1021                    */
      /* &1[1021] Fehler beim Ermitteln der Erstellungszeit der IFS- */
      /* ----------------------------------------------------------- */
 
@@ -3044,20 +3044,20 @@ er mit dem Fehlercode &3 aufgetreten. Der Fehlertext lautet: ''&4'''  +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1022                    */
-     /* &1[1022] Fehler beim Ermitteln der Zeit der letzten Änderun */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1022                    */
+     /* &1[1022] Fehler beim Ermitteln der Zeit der letzten  nderun */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1022) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1022] Fehler beim Ermitteln der Zeit der letzten Änderung der Date-
+'&1[1022] Fehler beim Ermitteln der Zeit der letzten  nderung der Date-
 n der Datei ''&2'' aufgetreten.'                                      +
                 ) +
                 SECLVL(+
 '&N &N Ursache . . . . :   Bei dem Versuch mit der Qp0lGetAttr()-Funkt-
-ion die Zeit der letzten Änderung der Daten der IFS Datei ''&2'' zu er-
+ion die Zeit der letzten  nderung der Daten der IFS Datei ''&2'' zu er-
 mitteln ist ein Fehler mit dem Fehlercode &3 aufgetreten. Der Fehlerte-
 xt lautet: ''&4'''                                                    +
                 ) +
@@ -3073,20 +3073,20 @@ xt lautet: ''&4'''                                                    +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1023                    */
-     /* &1[1023] Fehler beim Erstellen eines temporären Pfadnamens  */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1023                    */
+     /* &1[1023] Fehler beim Erstellen eines tempor ren Pfadnamens  */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1023) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1023] Fehler beim Erstellen eines temporären Pfadnamens mit Fehler-
+'&1[1023] Fehler beim Erstellen eines tempor ren Pfadnamens mit Fehler-
 code &2 aufgetreten.'                                                 +
                 ) +
                 SECLVL(+
 '&N &N Ursache . . . . :   Bei dem Versuch mit der _C_IFS_tmpnam() Fun-
-ktion einen temporären Pfadnamen zu erstellen ist ein Fehler mit dem F-
+ktion einen tempor ren Pfadnamen zu erstellen ist ein Fehler mit dem F-
 ehlercode &2 aufgetreten. Der Fehlertext lautet: ''&3'''              +
                 ) +
                 SEV(00) +
@@ -3100,20 +3100,20 @@ ehlercode &2 aufgetreten. Der Fehlertext lautet: ''&3'''              +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1024                    */
-     /* &1[1024] Ungültige Pfadangabe.                              */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1024                    */
+     /* &1[1024] Ung ltige Pfadangabe.                              */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1024) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1024] Ungültige Pfadangabe.'                                      +
+'&1[1024] Ung ltige Pfadangabe.'                                      +
                 ) +
                 SECLVL(+
-'&N &N Cause   . . . . :   Der angegebene Pfad ''&2'' ist ungültig. Mö-
-glicherweise wurde das Root-Verzeichnis angegeben oder der Pfad enthäl-
-t ungültige Zeichen.'                                                 +
+'&N &N Cause   . . . . :   Der angegebene Pfad ''&2'' ist ung ltig. M -
+glicherweise wurde das Root-Verzeichnis angegeben oder der Pfad enth l-
+t ung ltige Zeichen.'                                                 +
                 ) +
                 SEV(00) +
                 FMT( +
@@ -3125,20 +3125,20 @@ t ungültige Zeichen.'                                                 +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1025                    */
-     /* &1[1025] Fehler beim Abrufen der Objektberechtigungen für d */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1025                    */
+     /* &1[1025] Fehler beim Abrufen der Objektberechtigungen f r d */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1025) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1025] Fehler beim Abrufen der Objektberechtigungen für die Datei o-
+'&1[1025] Fehler beim Abrufen der Objektberechtigungen f r die Datei o-
 der das Verzechnis ''&2'' aufgetreten.'                               +
                 ) +
                 SECLVL(+
 '&N &N Ursache . . . . :   Bei dem Versuch mit der Unix stat()-Funktio-
-n die Berechtigungen für die IFS Datei oder das IFS Verzeichnis ''&2''-
+n die Berechtigungen f r die IFS Datei oder das IFS Verzeichnis ''&2''-
  zu ermitteln ist ein Fehler mit dem Fehlercode &3 aufgetreten. Der Fe-
 hlertext lautet: ''&4'''                                              +
                 ) +
@@ -3154,7 +3154,7 @@ hlertext lautet: ''&4'''                                              +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1026                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1026                    */
      /* &1[1026] Verzeichnis konnte nicht erstellt werden. Der Fehl */
      /* ----------------------------------------------------------- */
 
@@ -3182,20 +3182,20 @@ on das Verzeichnis ''&2'' anzulegen ist ein Fehler mit dem Fehlercode -
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1027                    */
-     /* &1[1027] Berechtigungen für Verzeichnis nicht gesetzt. Der  */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1027                    */
+     /* &1[1027] Berechtigungen f r Verzeichnis nicht gesetzt. Der  */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1027) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1027] Berechtigungen für Verzeichnis nicht gesetzt. Der Fehlercode-
+'&1[1027] Berechtigungen f r Verzeichnis nicht gesetzt. Der Fehlercode-
  ist &3.'                                                             +
                 ) +
                 SECLVL(+
 '&N &N Ursache . . . . :   Bei dem Versuch mit der Unix chmod()-Funkti-
-on die Berechtigungen für das Verzeichnis ''&2'' zu setzen ist ein Feh-
+on die Berechtigungen f r das Verzeichnis ''&2'' zu setzen ist ein Feh-
 ler mit dem Fehlercode &3 aufgetreten. Der Fehlertext lautet: ''&4''' +
                 ) +
                 SEV(00) +
@@ -3210,7 +3210,7 @@ ler mit dem Fehlercode &3 aufgetreten. Der Fehlertext lautet: ''&4''' +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1028                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1028                    */
      /* &1[1028] Fehler bei der Ermittlung der eindeutigen Datei-ID */
      /* ----------------------------------------------------------- */
 
@@ -3238,7 +3238,7 @@ hler mit dem Fehlercode &3 aufgetreten. Der Fehlertext lautet: ''&4'''+
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1029                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1029                    */
      /* &1[1029] Das aktuelle Verzeichnis konnte nicht ermittelt we */
      /* ----------------------------------------------------------- */
 
@@ -3264,20 +3264,20 @@ rcode &1 aufgetreten. Der Fehlertext lautet: ''&2'''                  +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1030                    */
-     /* &1[1030] Das aktuelle Verzeichnis konnte nicht auf '&1' geä */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1030                    */
+     /* &1[1030] Das aktuelle Verzeichnis konnte nicht auf '&1' ge  */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1030) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1030] Das aktuelle Verzeichnis konnte nicht auf ''&1'' geändert we-
+'&1[1030] Das aktuelle Verzeichnis konnte nicht auf ''&1'' ge ndert we-
 rden. Der Fehlercode ist &2.'                                         +
                 ) +
                 SECLVL(+
 '&N &N Ursache . . . . :   Bei dem Versuch mit der Unix QlgChdir()-Fun-
-ktion das aktuelle Verzeichnis zu ändern ist ein Fehler mit dem Fehler-
+ktion das aktuelle Verzeichnis zu  ndern ist ein Fehler mit dem Fehler-
 code &2 aufgetreten. Der Fehlertext lautet: ''&3'''                   +
                 ) +
                 SEV(00) +
@@ -3291,19 +3291,19 @@ code &2 aufgetreten. Der Fehlertext lautet: ''&3'''                   +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1031                    */
-     /* &1[1031] Fehler beim Löschen des IFS-Verzeichnis '&2' aufge */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1031                    */
+     /* &1[1031] Fehler beim L schen des IFS-Verzeichnis '&2' aufge */
      /* ----------------------------------------------------------- */
 
              ADDMSGD +
                 MSGID(IFS1031) +
                 MSGF(&LI/IFS) +
                 MSG(+
-'&1[1031] Fehler beim Löschen des IFS-Verzeichnis ''&2'' aufgetreten.'+
+'&1[1031] Fehler beim L schen des IFS-Verzeichnis ''&2'' aufgetreten.'+
                 ) +
                 SECLVL(+
 '&N &N Ursache . . . . :   Bei dem Versuch mit der Unix rmdir()-Funkti-
-on das IFS Verzeichnis ''&2'' zu löschen ist ein Fehler mit dem Fehler-
+on das IFS Verzeichnis ''&2'' zu l schen ist ein Fehler mit dem Fehler-
 code &3 aufgetreten. Der Fehlertext lautet: ''&4'''                   +
                 ) +
                 SEV(00) +
@@ -3318,7 +3318,7 @@ code &3 aufgetreten. Der Fehlertext lautet: ''&4'''                   +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1032                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1032                    */
      /* &1[1032] Das angegebene Verzeichnis '&2' existiert bereits. */
      /* ----------------------------------------------------------- */
 
@@ -3342,7 +3342,7 @@ cht erzeugt werden, weil es bereits existiert.'                       +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1033                    */
+     /*   Cmd-ADDMSGD f r Message-ID :   IFS1033                    */
      /* &1[1033] Das angegebene Verzeichnis '&2' konnte nicht angel */
      /* ----------------------------------------------------------- */
 
@@ -3382,7 +3382,7 @@ mbrtext =  "Sample Programs   History IFS Service Program     "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
 IFS - A Tools/400 Service Program
 ---------------------------------
@@ -3406,6 +3406,11 @@ and service programs (BND).
 -----------------------
       History
 -----------------------
+
+Version 1.9.6
+-------------
+
+Fixed:   Write IFS file with CCSID UTF-8 (1208).
 
 Version 1.9.5
 -------------
@@ -3582,7 +3587,7 @@ mbrtext =  "Prototypes of CEE APIs                   (include)"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       /if not defined(CEELIB)
       /define CEELIB
@@ -3867,7 +3872,7 @@ mbrtext =  "Prototypes of C-Library                  (include)"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       /if not defined(CLIB)
       /define CLIB
@@ -4881,16 +4886,16 @@ mbrtext =  "Copyright information                             "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       /if not defined(COPYRIGHT_DSPEC)
-     H COPYRIGHT('V1.9.5 - 03.03.2017 - mailto:thomas.raddatz@tools400.de')
+     H COPYRIGHT('V1.9.6 - 08.12.2025 - mailto:thomas.raddatz@tools400.de')
       /eof
       /endif
      D IFS_VERSION...
-     D                 C                   '1.9.5'
+     D                 C                   '1.9.6'
      D IFS_DATE...
-     D                 C                   '03.03.2017'
+     D                 C                   '08.12.2025'
 ]]>  </copysrc>
 </mbr>
 <sendmsg  sendmsgid="CPF9897" sendmsgtype = "*STATUS   "><![CDATA[
@@ -4904,7 +4909,7 @@ mbrtext =  "Tools/400 - IFS Stream Files Procedures           "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
 /* ==================================================== */
 /* >>PRE-COMPILER<<                                     */
@@ -4923,7 +4928,7 @@ srccssid=  "00273">
 /*     >>PARM<< USRPRF(*USER);                          */
 /*     >>PARM<< ACTGRP(*CALLER);                        */
 /*     >>PARM<< DETAIL(*BASIC);                         */
-/*     >>PARM<< TGTRLS(V6R1M0);                         */
+/*     >>PARM<< TGTRLS(V7R3M0);                         */
 /*     >>PARM<< TEXT('Tools/400 - IFS Stream +          */
 /*                    Files Procedures');               */
 /*   >>END-LINK<<                                       */
@@ -5297,7 +5302,7 @@ mbrtext =  "IFS - Funktionen                                  "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *=====================================================================*
       *  IFSR01     - SrvPgm: IFS-Funktionen                                *
@@ -5319,7 +5324,7 @@ srccssid=  "00273">
       *=====================================================================*
       *  History:                                                           *
       *                                                                     *
-      *  Datum       Name          Änderung                                 *
+      *  Datum       Name           nderung                                 *
       *  ----------  ------------  ---------------------------------------  *
       *  01.02.2005  Th.Raddatz    Added procedure f_readLineIfsFile() to   *
       *                            read a line from a streamfile.           *
@@ -5396,6 +5401,8 @@ srccssid=  "00273">
       *                            Fixed compile error message RNF7597.     *
       *                            Updated CEELIB and CLIB.                 *
       *                                                                     *
+      *  08.12.2025  Th.Raddatz    Fix writing utf-8 files.                 *
+      *                                                                     *
       * =================================================================== *
       * >>PRE-COMPILER<<                                                    *
       *   >>CRTCMD<< CRTRPGMOD    MODULE(&LI/&OB) +                         *
@@ -5403,7 +5410,7 @@ srccssid=  "00273">
       *   >>COMPILE<<                                                       *
       *     >>PARM<< DBGVIEW(*LIST);                                        *
       *     >>PARM<< TRUNCNBR(*NO );                                        *
-      *     >>PARM<< TGTRLS(V6R1M0);                                        *
+      *     >>PARM<< TGTRLS(V7R3M0);                                        *
       *     >>PARM<< OPTION(*EVENTF);                                       *
       *   >>END-COMPILE<<                                                   *
       *   >>EXECUTE<<                                                       *
@@ -6191,7 +6198,6 @@ srccssid=  "00273">
      D opnFlags        S                   like(i_opnFlags)  inz
      D doesExist       S               N                     inz(cFalse)
      D useTmpBuffer    S               N                     inz(cFalse)
-     D rc              S             10I 0                   inz
       *
       /COPY QIFS,IFS1000
       * ---------------------------------------------------------
@@ -6199,26 +6205,26 @@ srccssid=  "00273">
 
          // Process optional parameters ...
          // ... i_codePage
-         if   %parms >= p_isCodePage;
+         if (%parms() >= p_isCodePage);
             CEETSTA(isPresent: p_isCodePage: *omit);
          else;
             isPresent = 0;
          endif;
 
-         if   isPresent = 1;
+         if (isPresent = 1);
             codePage = i_codePage;
          else;
             codePage = cDFT_ASC_CODEPAGE;
          endif;
 
          // ... i_auth
-         if   %parms >= p_isAuth;
+         if (%parms() >= p_isAuth);
             CEETSTA(isPresent: p_isAuth: *omit);
          else;
             isPresent = 0;
          endif;
 
-         if   isPresent = 1;
+         if (isPresent = 1);
             auth = i_auth;
          else;
             auth = S_IRWXU + S_IRWXG + S_IRWXO;  // *PUBLIC = *ALL
@@ -6231,55 +6237,62 @@ srccssid=  "00273">
          opnFlags = i_opnFlags;
 
          // If O_CODEPAGE and O_CCSID are not specified ...
-         if   not f_isBitOn(O_CODEPAGE: opnFlags) and
-              not f_isBitOn(O_CCSID   : opnFlags);
-         // .. and the file does not exists
-            if   not doesExist;
-         //    .. then set O_CODEPAGE
+         if (not f_isBitOn(O_CODEPAGE: opnFlags) and
+             not f_isBitOn(O_CCSID: opnFlags));
+            // ... and the file does not exists
+            if (not doesExist);
+               // ... then set O_CODEPAGE
                opnFlags = opnFlags + O_CODEPAGE;
             endif;
          else;
-         // .. else if the file already exists
-            if   doesExist;
-         //    .. then remove O_CODEPAGE or O_CCSID
+         // ... else if the file already exists
+            if (doesExist);
+               // ... then remove O_CODEPAGE or O_CCSID
                select;
-               when f_isBitOn(O_CODEPAGE: opnFlags);
+               when (f_isBitOn(O_CODEPAGE: opnFlags));
                   opnFlags = opnFlags - O_CODEPAGE;
-               when f_isBitOn(O_CCSID   : opnFlags);
+               when (f_isBitOn(O_CCSID: opnFlags));
                   opnFlags = opnFlags - O_CCSID;
                endsl;
             endif;
          endif;
 
          // Open the file
-         hFile = open(%trimr(i_path): opnFlags: auth: codePage);
+         if (f_isBitOn(O_TEXT_CREAT: opnFlags));
+            if (not f_isBitOn(O_CCSID: opnFlags));
+               opnFlags = opnFlags + O_CCSID;
+            endif;
+            hFile = open(%trimr(i_path): opnFlags: auth: codePage: 0);
+         else;
+            hFile = open(%trimr(i_path): opnFlags: auth: codePage);
 
-         // If the file was just created ...
-         if   (hFile <> RC_ERROR)  and  (not doesExist);
-         // ... then re-open the file to let the operating system
-         //     do the codepage conversion.
-            if   close(hFile) = RC_ERROR;
-               hFile = RC_ERROR;
-            else;
-               // Remove O_CODEPAGE or O_CCSID flag
-               select;
-               when f_isBitOn(O_CODEPAGE: opnFlags);
-                  opnFlags = opnFlags - O_CODEPAGE;
-               when f_isBitOn(O_CCSID   : opnFlags);
-                  opnFlags = opnFlags - O_CCSID;
-               endsl;
-               // Remove the O_CREAT flag
-               if   f_isBitOn(O_CREAT: opnFlags);
-                  opnFlags = opnFlags - O_CREAT;
+            // If the file was just created ...
+            if (hFile <> RC_ERROR) and (not doesExist);
+               // ... then re-open the file to let the operating system
+               //     do the codepage conversion.
+               if (close(hFile) = RC_ERROR);
+                  hFile = RC_ERROR;
+               else;
+                  // Remove O_CODEPAGE or O_CCSID flag
+                  select;
+                  when (f_isBitOn(O_CODEPAGE: opnFlags));
+                     opnFlags = opnFlags - O_CODEPAGE;
+                  when (f_isBitOn(O_CCSID   : opnFlags));
+                     opnFlags = opnFlags - O_CCSID;
+                  endsl;
+                  // Remove the O_CREAT flag
+                  if   f_isBitOn(O_CREAT: opnFlags);
+                     opnFlags = opnFlags - O_CREAT;
+                  endif;
+                  // Re-open the file
+                  hFile = open(%trimr(i_path): opnFlags);
                endif;
-               // Re-open the file
-               hFile = open(%trimr(i_path): opnFlags);
             endif;
          endif;
 
          // In case on an open error ...
-         if   hFile = RC_ERROR;
-         // ... create error message
+         if (hFile = RC_ERROR);
+            // ... create error message
             clear   IFS1000;
             IFS10001 = '';
             IFS10002 = i_path;
@@ -6287,7 +6300,7 @@ srccssid=  "00273">
             IFS10004 = f_strerror(f_errno);
             msg = lf_newIfsMsg('IFS1000': IFS1000);
          else;
-         // ... else store the path in the file handle table
+            // ... else store the path in the file handle table
             useTmpBuffer = (f_isBitOn(O_SHARE_WRONLY: opnFlags) or
                             f_isBitOn(O_SHARE_RDWR  : opnFlags)) and
                            (f_isBitOn(O_WRONLY: opnFlags) or
@@ -9941,12 +9954,12 @@ mbrtext =  "MSG:  1[1000] Fehler beim Öffnen der IFS-Datei   2"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1000
+      * Datenstruktur f r Message-ID : IFS1000
       *
-      * &1[1000] Fehler beim Öffnen der IFS-Datei '&2' mit Fehlerco
+      * &1[1000] Fehler beim  ffnen der IFS-Datei '&2' mit Fehlerco
       *
      D IFS1000         DS
      D  IFS10001                    001A   INZ(*BLANKS)
@@ -9968,12 +9981,12 @@ mbrtext =  "MSG:  1[1001] Fehler beim Schließen der IFS-Datei "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1001
+      * Datenstruktur f r Message-ID : IFS1001
       *
-      * &1[1001] Fehler beim Schließen der IFS-Datei '&2' aufgetret
+      * &1[1001] Fehler beim Schlie en der IFS-Datei '&2' aufgetret
       *
      D IFS1001         DS
      D  IFS10011                    001A   INZ(*BLANKS)
@@ -9995,10 +10008,10 @@ mbrtext =  "MSG:  1[1002] Fehler beim Schreiben in die IFS-Dat"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1002
+      * Datenstruktur f r Message-ID : IFS1002
       *
       * &1[1002] Fehler beim Schreiben in die IFS-Datei '&2' aufget
       *
@@ -10022,10 +10035,10 @@ mbrtext =  "MSG:  1[1003] Fehler beim Verschieben der IFS-Date"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1003
+      * Datenstruktur f r Message-ID : IFS1003
       *
       * &1[1003] Fehler beim Verschieben der IFS-Datei '&2' nach '&
       *
@@ -10050,10 +10063,10 @@ mbrtext =  "MSG:  1[1004] Fehler beim Lesen aus der IFS-Datei "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1004
+      * Datenstruktur f r Message-ID : IFS1004
       *
       * &1[1004] Fehler beim Lesen aus der IFS-Datei '&2' aufgetret
       *
@@ -10077,12 +10090,12 @@ mbrtext =  "MSG:  1[1005] Fehler beim Löschen der IFS-Datei   "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1005
+      * Datenstruktur f r Message-ID : IFS1005
       *
-      * &1[1005] Fehler beim Löschen der IFS-Datei '&2' aufgetreten
+      * &1[1005] Fehler beim L schen der IFS-Datei '&2' aufgetreten
       *
      D IFS1005         DS
      D  IFS10051                    001A   INZ(*BLANKS)
@@ -10104,12 +10117,12 @@ mbrtext =  "MSG:  1[1006] Fehler beim Ermitteln der Größe der "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1006
+      * Datenstruktur f r Message-ID : IFS1006
       *
-      * &1[1006] Fehler beim Ermitteln der Größe der IFS-Datei '&2'
+      * &1[1006] Fehler beim Ermitteln der Gr  e der IFS-Datei '&2'
       *
      D IFS1006         DS
      D  IFS10061                    001A   INZ(*BLANKS)
@@ -10131,12 +10144,12 @@ mbrtext =  "MSG:  1[1007] Fehler beim Setzen der Größe der IFS"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1007
+      * Datenstruktur f r Message-ID : IFS1007
       *
-      * &1[1007] Fehler beim Setzen der Größe der IFS-Datei '&2' au
+      * &1[1007] Fehler beim Setzen der Gr  e der IFS-Datei '&2' au
       *
      D IFS1007         DS
      D  IFS10071                    001A   INZ(*BLANKS)
@@ -10158,10 +10171,10 @@ mbrtext =  "MSG:  1[1008] Fehler beim Setzen des Schreib-/Lese"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1008
+      * Datenstruktur f r Message-ID : IFS1008
       *
       * &1[1008] Fehler beim Setzen des Schreib-/Lesezeigers der IF
       *
@@ -10187,10 +10200,10 @@ mbrtext =  "MSG:  1[1009] Fehler beim Umbenennen der IFS-Datei"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1009
+      * Datenstruktur f r Message-ID : IFS1009
       *
       * &1[1009] Fehler beim Umbenennen der IFS-Datei '&2' nach '&3
       *
@@ -10215,10 +10228,10 @@ mbrtext =  "MSG:  1[1011] IFS-Verzeichnis nicht vorhanden.    "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1011
+      * Datenstruktur f r Message-ID : IFS1011
       *
       * &1[1011] IFS-Verzeichnis nicht vorhanden.
       *
@@ -10240,10 +10253,10 @@ mbrtext =  "MSG:  1[1012] IFS-Datei nicht vorhanden.          "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1012
+      * Datenstruktur f r Message-ID : IFS1012
       *
       * &1[1012] IFS-Datei nicht vorhanden.
       *
@@ -10265,10 +10278,10 @@ mbrtext =  "MSG:  1[1013] IFS-Datei existiert.                "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1013
+      * Datenstruktur f r Message-ID : IFS1013
       *
       * &1[1013] IFS-Datei existiert.
       *
@@ -10290,12 +10303,12 @@ mbrtext =  "MSG:  1[1014] IFS-Dateiname enthält ungültige Zeic"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1014
+      * Datenstruktur f r Message-ID : IFS1014
       *
-      * &1[1014] IFS-Dateiname enthält ungültige Zeichen oder Pfada
+      * &1[1014] IFS-Dateiname enth lt ung ltige Zeichen oder Pfada
       *
      D IFS1014         DS
      D  IFS10141                    001A   INZ(*BLANKS)
@@ -10315,10 +10328,10 @@ mbrtext =  "MSG:  1[1015] IFS-Verzeichnis existiert.          "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1015
+      * Datenstruktur f r Message-ID : IFS1015
       *
       * &1[1015] IFS-Verzeichnis existiert.
       *
@@ -10340,12 +10353,12 @@ mbrtext =  "MSG:  1[1016] Pufferüberlauf beim Lesen aus der IF"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1016
+      * Datenstruktur f r Message-ID : IFS1016
       *
-      * &1[1016] Pufferüberlauf beim Lesen aus der IFS Datei '&2'
+      * &1[1016] Puffer berlauf beim Lesen aus der IFS Datei '&2'
       *
      D IFS1016         DS
      D  IFS10161                    001A   INZ(*BLANKS)
@@ -10366,10 +10379,10 @@ mbrtext =  "MSG:  1[1017] Fehler beim Lesen aus dem Verzeichni"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1017
+      * Datenstruktur f r Message-ID : IFS1017
       *
       * &1[1017] Fehler beim Lesen aus dem Verzeichnis '&2' aufgetr
       *
@@ -10393,10 +10406,10 @@ mbrtext =  "MSG:  1[1018] Fehler beim Abrufen der Attribute de"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1018
+      * Datenstruktur f r Message-ID : IFS1018
       *
       * &1[1018] Fehler beim Abrufen der Attribute der Datei '&2' a
       *
@@ -10420,12 +10433,12 @@ mbrtext =  "MSG:  1[1019] Fehler beim Öffnen des Verzeichnis  "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1019
+      * Datenstruktur f r Message-ID : IFS1019
       *
-      * &1[1019] Fehler beim Öffnen des Verzeichnis '&2' aufgetrete
+      * &1[1019] Fehler beim  ffnen des Verzeichnis '&2' aufgetrete
       *
      D IFS1019         DS
      D  IFS10191                    001A   INZ(*BLANKS)
@@ -10447,12 +10460,12 @@ mbrtext =  "MSG:  1[1020] Fehler beim Schließen des Verzeichni"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1020
+      * Datenstruktur f r Message-ID : IFS1020
       *
-      * &1[1020] Fehler beim Schließen des Verzeichnis '&2' aufgetr
+      * &1[1020] Fehler beim Schlie en des Verzeichnis '&2' aufgetr
       *
      D IFS1020         DS
      D  IFS10201                    001A   INZ(*BLANKS)
@@ -10474,10 +10487,10 @@ mbrtext =  "MSG:  1[1021] Fehler beim Ermitteln der Erstellung"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1021
+      * Datenstruktur f r Message-ID : IFS1021
       *
       * &1[1021] Fehler beim Ermitteln der Erstellungszeit der IFS-
       *
@@ -10501,12 +10514,12 @@ mbrtext =  "MSG:  1[1022] Fehler beim Ermitteln der Zeit der l"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1022
+      * Datenstruktur f r Message-ID : IFS1022
       *
-      * &1[1022] Fehler beim Ermitteln der Zeit der letzten Änderun
+      * &1[1022] Fehler beim Ermitteln der Zeit der letzten  nderun
       *
      D IFS1022         DS
      D  IFS10221                    001A   INZ(*BLANKS)
@@ -10528,12 +10541,12 @@ mbrtext =  "MSG:  1[1023] Fehler beim Erstellen eines temporär"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1023
+      * Datenstruktur f r Message-ID : IFS1023
       *
-      * &1[1023] Fehler beim Erstellen eines temporären Pfadnamens
+      * &1[1023] Fehler beim Erstellen eines tempor ren Pfadnamens
       *
      D IFS1023         DS
      D  IFS10231                    001A   INZ(*BLANKS)
@@ -10554,12 +10567,12 @@ mbrtext =  "MSG:  1[1024] Ungültige Pfadangabe.               "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1024
+      * Datenstruktur f r Message-ID : IFS1024
       *
-      * &1[1024] Ungültige Pfadangabe.
+      * &1[1024] Ung ltige Pfadangabe.
       *
      D IFS1024         DS
      D  IFS10241                    001A   INZ(*BLANKS)
@@ -10579,12 +10592,12 @@ mbrtext =  "MSG:  1[1025] Fehler beim Abrufen der Objektberech"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1025
+      * Datenstruktur f r Message-ID : IFS1025
       *
-      * &1[1025] Fehler beim Abrufen der Objektberechtigungen für d
+      * &1[1025] Fehler beim Abrufen der Objektberechtigungen f r d
       *
      D IFS1025         DS
      D  IFS10251                    001A   INZ(*BLANKS)
@@ -10606,10 +10619,10 @@ mbrtext =  "MSG:  1[1026] Verzeichnis konnte nicht erstellt we"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1026
+      * Datenstruktur f r Message-ID : IFS1026
       *
       * &1[1026] Verzeichnis konnte nicht erstellt werden. Der Fehl
       *
@@ -10633,12 +10646,12 @@ mbrtext =  "MSG:  1[1027] Berechtigungen für Verzeichnis nicht"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1027
+      * Datenstruktur f r Message-ID : IFS1027
       *
-      * &1[1027] Berechtigungen für Verzeichnis nicht gesetzt. Der
+      * &1[1027] Berechtigungen f r Verzeichnis nicht gesetzt. Der
       *
      D IFS1027         DS
      D  IFS10271                    001A   INZ(*BLANKS)
@@ -10660,10 +10673,10 @@ mbrtext =  "MSG:  1[1028] Fehler beim Ermitteln der Größe der "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1028
+      * Datenstruktur f r Message-ID : IFS1028
       *
       * &1[1028] Fehler bei der Ermittlung der eindeutigen Datei-ID
       *
@@ -10687,10 +10700,10 @@ mbrtext =  "MSG:  1[1029] Das aktuelle Verzeichnis konnte nich"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1029
+      * Datenstruktur f r Message-ID : IFS1029
       *
       * &1[1029] Das aktuelle Verzeichnis konnte nicht ermittelt we
       *
@@ -10712,12 +10725,12 @@ mbrtext =  "MSG:  1[1030] Das aktuelle Verzeichnis konnte nich"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1030
+      * Datenstruktur f r Message-ID : IFS1030
       *
-      * &1[1030] Das aktuelle Verzeichnis konnte nicht auf '&1' geä
+      * &1[1030] Das aktuelle Verzeichnis konnte nicht auf '&1' ge
       *
      D IFS1030         DS
      D  IFS10301                    128A   INZ(*BLANKS)
@@ -10738,12 +10751,12 @@ mbrtext =  "MSG:  1[1031] Fehler beim Löschen des IFS-Verzeich"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1031
+      * Datenstruktur f r Message-ID : IFS1031
       *
-      * &1[1031] Fehler beim Löschen des IFS-Verzeichnis '&2' aufge
+      * &1[1031] Fehler beim L schen des IFS-Verzeichnis '&2' aufge
       *
      D IFS1031         DS
      D  IFS10311                    001A   INZ(*BLANKS)
@@ -10765,10 +10778,10 @@ mbrtext =  "MSG:  1[1032] Das angegebene Verzeichnis   2  exis"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1032
+      * Datenstruktur f r Message-ID : IFS1032
       *
       * &1[1032] Das angegebene Verzeichnis '&2' existiert bereits.
       *
@@ -10792,10 +10805,10 @@ mbrtext =  "MSG:  1[1033] Das angegebene Verzeichnis   2  konn"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1033
+      * Datenstruktur f r Message-ID : IFS1033
       *
       * &1[1033] Das angegebene Verzeichnis '&2' konnte nicht angel
       *
@@ -10819,7 +10832,7 @@ mbrtext =  "IFS - Funktionen                         (include)"
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
  DEF  /IF NOT DEFINED(PIFS)
  DEF  /DEFINE PIFS
@@ -11278,7 +11291,7 @@ mbrtext =  "Test: open/write/read/close using O_CODEPAGE impl."
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_01) PARM('/home/raddatz/fileName')        *
@@ -11433,7 +11446,7 @@ mbrtext =  "Test: readLine                                    "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_02) PARM('/home/raddatz/Lazy_Dog.txt')    *
@@ -11579,7 +11592,7 @@ mbrtext =  "Test: writeLine                                   "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_03) PARM('/home/raddatz/Lazy_Dog.txt')    *
@@ -11717,7 +11730,7 @@ mbrtext =  "Test: readIfsDir                                  "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_04) PARM('/home/raddatz/test_ifs/*')      *
@@ -12093,7 +12106,7 @@ mbrtext =  "Test: open/write/read/close using O_CCSID    1252 "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_05) PARM('/home/raddatz/fileName')        *
@@ -12236,7 +12249,7 @@ mbrtext =  "Test: open/write/read/close using O_CODEPAGE 1252 "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_06) PARM('/home/raddatz/fileName')        *
@@ -12379,7 +12392,7 @@ mbrtext =  "Test: file extensions                             "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_07) PARM('/home/raddatz/fileName.ext')    *
@@ -12551,7 +12564,7 @@ mbrtext =  "Test: f_getIfsCurDir / f_chgIfsCurDir             "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_08)                                       *
@@ -12694,7 +12707,7 @@ mbrtext =  "Test: f_dltIfsDir()_                              "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_09) PARM('/home/raddatz/test_ifs/*')      *
@@ -12853,7 +12866,7 @@ mbrtext =  "Test: f_isIfsDirEmpty()                           "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_10) PARM('/home/raddatz/test_ifs/')       *
@@ -13025,6 +13038,145 @@ srccssid=  "00273">
 ]]>  </copysrc>
 </mbr>
 <sendmsg  sendmsgid="CPF9897" sendmsgtype = "*STATUS   "><![CDATA[
+Installing IFSTEST_11  type RPGLE - in progress.
+]]>  </sendmsg>
+<!-- START OF MEMBER  -->
+<mbr
+mbrname =  "IFSTEST_11"
+mbrtype =  "RPGLE     "
+mbrtext =  "Test: open/write/read/close using O_CCSID    1208 "
+srcfile =  "QIFS      "
+srclib  =  "selected  "
+srclen  =  "00112"
+srccssid=  "01141">
+<copysrc><![CDATA[
+      *===============================================================*
+      *    CALL PGM(IFSTEST_11) PARM('/home/raddatz/fileName')        *
+      *===============================================================*
+      *   >>PRE-COMPILER<<                                            *
+      *                                                               *
+      *     >>CRTCMD<<  CRTRPGMOD    MODULE(&LI/&OB) +                *
+      *                              SRCFILE(&SL/&SF) +               *
+      *                              SRCMBR(&SM);                     *
+      *                                                               *
+      *     >>COMPILE<<                                               *
+      *       >>PARM<< TRUNCNBR(*NO);                                 *
+      *       >>PARM<< DBGVIEW(*LIST);                                *
+      *       >>PARM<< TGTRLS(*CURRENT);                              *
+      *     >>END-COMPILE<<                                           *
+      *                                                               *
+      *     >>EXECUTE<<                                               *
+      *                                                               *
+      *     >>CMD<<     CRTPGM       PGM(&LI/&OB) +                   *
+      *                              MODULE(&LI/&OB) +                *
+      *                              ACTGRP(*NEW) +                   *
+      *                              BNDSRVPGM(&LI/IFS    ) +         *
+      *                              BNDDIR(QC2LE         ) +         *
+      *                              TGTRLS(*CURRENT) +               *
+      *                              DETAIL(*BASIC);                  *
+      *                                                               *
+      *   >>END-PRE-COMPILER<<                                        *
+      *===============================================================*
+     H DEBUG
+     H OPTION(*SRCSTMT : *NODEBUGIO)
+     H DECEDIT('0,') DATEDIT(*DMY.)
+     H DATFMT(*ISO )  TIMFMT(*ISO )
+     H EXPROPTS(*RESDECPOS)
+     H EXTBININT(*YES)
+      *===============================================================*
+      *
+      * ------------------------------------
+      *  Type Definitions
+      * ------------------------------------
+      *
+      * ------------------------------------
+      *  External Prototypes
+      * ------------------------------------
+      /COPY QIFS,PIFS
+      *
+      * ------------------------------------
+      *  Global Fields
+      * ------------------------------------
+      *
+      * ------------------------------------
+      *  Global Constants
+      * ------------------------------------
+      *
+      * ------------------------------------
+      *  Prototypes
+      * ------------------------------------
+      *
+     D PGM_ENTRY_POINT...
+     D                 PR                         extpgm('IFSTEST_11')
+     D  gi_path                      32A   const
+      *
+     D main...
+     D                 PR
+     D  i_path                       32A   const
+      *
+      *===============================================================*
+      *  Program Entry Point
+      *===============================================================*
+      *
+     D PGM_ENTRY_POINT...
+     D                 PI
+     D  gi_path                      32A   const
+      * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      /FREE
+
+         main(gi_path);
+
+         *inlr = *on;
+
+         return;
+
+      /END-FREE
+      *
+      *===============================================================*
+      *  Main procedure
+      *===============================================================*
+     P main...
+     P                 B
+      *
+     D main...
+     D                 PI
+     D  i_path                       32A   const
+      *
+      *  Helper fields
+     D hFile           S                   like(ifs_hFile_t ) inz
+     D bytesRed        S             10I 0                    inz
+     D buffer          S             64A                      inz
+      * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      /FREE
+
+         // Open IFS file (The file must not yet exists!)
+         // Open flags:     read & write
+         //                 share with readers
+         //                 create file, send message if file exists
+         //                 open for text data
+         hFile = f_openIfsFile(%trim(i_path)
+                               : O_CREAT + O_RDWR + O_CCSID + O_TRUNC +
+                                 O_TEXTDATA + O_TEXT_CREAT
+                               : 1208);
+
+         // Write to file
+         f_writeIfsFile(hFile: 'Hello World! (äöüÖÄÜß)': 0);
+         f_writeIfsFile(hFile: x'0D0A': 0);
+         f_writeIfsFile(hFile: %char(%timestamp()): 0);
+
+         // Close IFS file
+         f_closeIfsFile(hFile);
+
+         return;
+
+      /END-FREE
+      *
+     P main...
+     P                 E
+      *
+]]>  </copysrc>
+</mbr>
+<sendmsg  sendmsgid="CPF9897" sendmsgtype = "*STATUS   "><![CDATA[
 Installing IFSTEST_30  type RPGLE - in progress.
 ]]>  </sendmsg>
 <!-- START OF MEMBER  -->
@@ -13035,7 +13187,7 @@ mbrtext =  "Test: writeLine    (1200)                         "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_03) PARM('/home/raddatz/Lazy_Dog.txt')    *
@@ -13174,7 +13326,7 @@ mbrtext =  "Test: f_crtIfsDir                                 "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_31) PARM('/tmp/raddatz/dir1')             *
@@ -13297,7 +13449,7 @@ mbrtext =  "Test: /home/Raddatz/test_ifs/file_5.txt           "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_32) PARM('/home/raddatz/fileName')        *
@@ -13459,7 +13611,7 @@ mbrtext =  "Test: /home/Raddatz/test_ifs/file_6.txt           "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_33) PARM('/home/raddatz/fileName')        *
@@ -13625,7 +13777,7 @@ mbrtext =  "Test: readIfsDir + deleted files                  "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_04) PARM('/home/raddatz/genStrCmp/*')     *
@@ -13827,7 +13979,7 @@ mbrtext =  "Test: readIfsDir                                  "
 srcfile =  "QIFS      "
 srclib  =  "selected  "
 srclen  =  "00112"
-srccssid=  "00273">
+srccssid=  "01141">
 <copysrc><![CDATA[
       *===============================================================*
       *    CALL PGM(IFSTEST_04) PARM('/home/raddatz/genStrCmp/*')     *
@@ -14192,7 +14344,7 @@ CRTBNDCL PGM(&tolib/A_INSTALL) SRCFILE(&tolib/QIFS) SRCMBR(*PGM) DFTACTGRP(*NO) 
 (*LIST)
 ]]>  </qcmdexc>
 <qcmdexc condition="*NONE" release="*CURRENT" dltsplf="*NONE"><![CDATA[
-CALL PGM(&tolib/A_INSTALL) PARM('&TGTRLS' '&SRCFILE' '&tolib' '&LANG' '&L_LIBL')
+CALL PGM(&tolib/A_INSTALL) PARM(('&TGTRLS') ('&SRCFILE') ('&tolib') ('&LANG') ('&L_LIBL'))
 ]]>  </qcmdexc>
 <qcmdexc condition="*NONE" release="*CURRENT" dltsplf="*NONE"><![CDATA[
 DLTPGM PGM(&tolib/A_INSTALL)

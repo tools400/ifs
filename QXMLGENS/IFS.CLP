@@ -297,6 +297,11 @@
                           XTOSRCF(QIFS      ) XOBJTYPE(*PGM) +
                           XGENCRT(*NO) XPARAM(*BLANK)
 
+             XMLGENMBR  XMBR(IFSTEST_11) XMBRATR(RPGLE ) +
+                          XFROMSRCF(QIFS      ) XFROMSRCL(TOOLS400   ) +
+                          XTOSRCF(QIFS      ) XOBJTYPE(*PGM) +
+                          XGENCRT(*NO) XPARAM(*BLANK)
+
              XMLGENMBR  XMBR(IFSTEST_30) XMBRATR(RPGLE ) +
                           XFROMSRCF(QIFS      ) XFROMSRCL(TOOLS400   ) +
                           XTOSRCF(QIFS      ) XOBJTYPE(*PGM) +

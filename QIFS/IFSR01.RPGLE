@@ -18,7 +18,7 @@
       *=====================================================================*
       *  History:                                                           *
       *                                                                     *
-      *  Datum       Name          Änderung                                 *
+      *  Datum       Name          ï¿½nderung                                 *
       *  ----------  ------------  ---------------------------------------  *
       *  01.02.2005  Th.Raddatz    Added procedure f_readLineIfsFile() to   *
       *                            read a line from a streamfile.           *
@@ -95,6 +95,8 @@
       *                            Fixed compile error message RNF7597.     *
       *                            Updated CEELIB and CLIB.                 *
       *                                                                     *
+      *  08.12.2025  Th.Raddatz    Fix writing utf-8 files.                 *
+      *                                                                     *
       * =================================================================== *
       * >>PRE-COMPILER<<                                                    *
       *   >>CRTCMD<< CRTRPGMOD    MODULE(&LI/&OB) +                         *
@@ -102,7 +104,7 @@
       *   >>COMPILE<<                                                       *
       *     >>PARM<< DBGVIEW(*LIST);                                        *
       *     >>PARM<< TRUNCNBR(*NO );                                        *
-      *     >>PARM<< TGTRLS(V6R1M0);                                        *
+      *     >>PARM<< TGTRLS(V7R3M0);                                        *
       *     >>PARM<< OPTION(*EVENTF);                                       *
       *   >>END-COMPILE<<                                                   *
       *   >>EXECUTE<<                                                       *
@@ -890,7 +892,6 @@
      D opnFlags        S                   like(i_opnFlags)  inz
      D doesExist       S               N                     inz(cFalse)
      D useTmpBuffer    S               N                     inz(cFalse)
-     D rc              S             10I 0                   inz
       *
       /COPY QIFS,IFS1000
       * ---------------------------------------------------------
@@ -898,26 +899,26 @@
 
          // Process optional parameters ...
          // ... i_codePage
-         if   %parms >= p_isCodePage;
+         if (%parms() >= p_isCodePage);
             CEETSTA(isPresent: p_isCodePage: *omit);
          else;
             isPresent = 0;
          endif;
 
-         if   isPresent = 1;
+         if (isPresent = 1);
             codePage = i_codePage;
          else;
             codePage = cDFT_ASC_CODEPAGE;
          endif;
 
          // ... i_auth
-         if   %parms >= p_isAuth;
+         if (%parms() >= p_isAuth);
             CEETSTA(isPresent: p_isAuth: *omit);
          else;
             isPresent = 0;
          endif;
 
-         if   isPresent = 1;
+         if (isPresent = 1);
             auth = i_auth;
          else;
             auth = S_IRWXU + S_IRWXG + S_IRWXO;  // *PUBLIC = *ALL
@@ -930,55 +931,62 @@
          opnFlags = i_opnFlags;
 
          // If O_CODEPAGE and O_CCSID are not specified ...
-         if   not f_isBitOn(O_CODEPAGE: opnFlags) and
-              not f_isBitOn(O_CCSID   : opnFlags);
-         // .. and the file does not exists
-            if   not doesExist;
-         //    .. then set O_CODEPAGE
+         if (not f_isBitOn(O_CODEPAGE: opnFlags) and
+             not f_isBitOn(O_CCSID: opnFlags));
+            // ... and the file does not exists
+            if (not doesExist);
+               // ... then set O_CODEPAGE
                opnFlags = opnFlags + O_CODEPAGE;
             endif;
          else;
-         // .. else if the file already exists
-            if   doesExist;
-         //    .. then remove O_CODEPAGE or O_CCSID
+         // ... else if the file already exists
+            if (doesExist);
+               // ... then remove O_CODEPAGE or O_CCSID
                select;
-               when f_isBitOn(O_CODEPAGE: opnFlags);
+               when (f_isBitOn(O_CODEPAGE: opnFlags));
                   opnFlags = opnFlags - O_CODEPAGE;
-               when f_isBitOn(O_CCSID   : opnFlags);
+               when (f_isBitOn(O_CCSID: opnFlags));
                   opnFlags = opnFlags - O_CCSID;
                endsl;
             endif;
          endif;
 
          // Open the file
-         hFile = open(%trimr(i_path): opnFlags: auth: codePage);
+         if (f_isBitOn(O_TEXT_CREAT: opnFlags));
+            if (not f_isBitOn(O_CCSID: opnFlags));
+               opnFlags = opnFlags + O_CCSID;
+            endif;
+            hFile = open(%trimr(i_path): opnFlags: auth: codePage: 0);
+         else;
+            hFile = open(%trimr(i_path): opnFlags: auth: codePage);
 
-         // If the file was just created ...
-         if   (hFile <> RC_ERROR)  and  (not doesExist);
-         // ... then re-open the file to let the operating system
-         //     do the codepage conversion.
-            if   close(hFile) = RC_ERROR;
-               hFile = RC_ERROR;
-            else;
-               // Remove O_CODEPAGE or O_CCSID flag
-               select;
-               when f_isBitOn(O_CODEPAGE: opnFlags);
-                  opnFlags = opnFlags - O_CODEPAGE;
-               when f_isBitOn(O_CCSID   : opnFlags);
-                  opnFlags = opnFlags - O_CCSID;
-               endsl;
-               // Remove the O_CREAT flag
-               if   f_isBitOn(O_CREAT: opnFlags);
-                  opnFlags = opnFlags - O_CREAT;
+            // If the file was just created ...
+            if (hFile <> RC_ERROR) and (not doesExist);
+               // ... then re-open the file to let the operating system
+               //     do the codepage conversion.
+               if (close(hFile) = RC_ERROR);
+                  hFile = RC_ERROR;
+               else;
+                  // Remove O_CODEPAGE or O_CCSID flag
+                  select;
+                  when (f_isBitOn(O_CODEPAGE: opnFlags));
+                     opnFlags = opnFlags - O_CODEPAGE;
+                  when (f_isBitOn(O_CCSID   : opnFlags));
+                     opnFlags = opnFlags - O_CCSID;
+                  endsl;
+                  // Remove the O_CREAT flag
+                  if   f_isBitOn(O_CREAT: opnFlags);
+                     opnFlags = opnFlags - O_CREAT;
+                  endif;
+                  // Re-open the file
+                  hFile = open(%trimr(i_path): opnFlags);
                endif;
-               // Re-open the file
-               hFile = open(%trimr(i_path): opnFlags);
             endif;
          endif;
 
          // In case on an open error ...
-         if   hFile = RC_ERROR;
-         // ... create error message
+         if (hFile = RC_ERROR);
+            // ... create error message
             clear   IFS1000;
             IFS10001 = '';
             IFS10002 = i_path;
@@ -986,7 +994,7 @@
             IFS10004 = f_strerror(f_errno);
             msg = lf_newIfsMsg('IFS1000': IFS1000);
          else;
-         // ... else store the path in the file handle table
+            // ... else store the path in the file handle table
             useTmpBuffer = (f_isBitOn(O_SHARE_WRONLY: opnFlags) or
                             f_isBitOn(O_SHARE_RDWR  : opnFlags)) and
                            (f_isBitOn(O_WRONLY: opnFlags) or
