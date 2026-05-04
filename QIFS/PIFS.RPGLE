@@ -91,11 +91,11 @@
      D  o_msg                              value  like(msg_t         )
       *
       *  Type definitions
-     D ifs_path_t      S            256A   based(pDummy)
-     D ifs_hFile_t     S             10I 0 based(pDummy)
-     D ifs_EOLChar_t   S             32A   based(pDummy)  varying
-     D ifs_type_t      S             10A   based(pDummy)
-     D ifs_fileID_t    DS                  qualified               based(pDummy)
+     D ifs_path_t      S            256A   template
+     D ifs_hFile_t     S             10I 0 template
+     D ifs_EOLChar_t   S             32A   template  varying
+     D ifs_type_t      S             10A   template
+     D ifs_fileID_t    DS                  qualified               template
      D  ino                          10U 0
      D  dev                          20U 0
       *

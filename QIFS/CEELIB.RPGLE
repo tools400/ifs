@@ -6,7 +6,7 @@
       * ---------------------------------------------------------------
       *
       *  Condition token, used as feedback code
-     d cee_fc_t        ds                  qualified               based(pDummy)
+     d cee_fc_t        ds                  qualified               template
      d  Condition_ID...
      d                         1      4A
      d   MsgSev                1      2I 0
@@ -29,7 +29,7 @@
      d  o_fc                         12a          options(*omit   )
       *
       *  Reference fields for CEEDOD API
-     d descInf_t       ds                  based(pDummy)   qualified
+     d descInf_t       ds                  template   qualified
      d  desctype                     10i 0
      d  datatype                     10i 0
      d  descinf1                     10i 0
@@ -55,7 +55,7 @@
      d  o_fb                         12a          options(*omit   )
       *
       *  Reference fields for CEEGSI API
-     d strInf_t        ds                  based(pDummy)   qualified
+     d strInf_t        ds                  template   qualified
      d  datatype                     10i 0
      d  curlen                       10i 0
      d  maxlen                       10i 0
@@ -203,7 +203,7 @@
      d  offsetseconds                 8f
      d  feedback                     12a   options(*nopass)
       *
-     d cee_utco_t      ds                  qualified   based(pDummy)
+     d cee_utco_t      ds                  qualified   template
      d  offhours                     10i 0
      d  offmins                      10i 0
      d  offsecs                       8f

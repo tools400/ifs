@@ -38,23 +38,23 @@
       *  Type Definitions
       * ------------------------------------
       /if not defined(*V5R2M0)
-     D resultSet_t     DS                  based(pDummy)   qualified
+     D resultSet_t     DS                  template   qualified
      D  selectedPath                       like(ifs_path_t)
      D  msg                                like(msg_t   )
      D  numE                         10I 0
      D  entry                              like(entry_t) dim(10)
       *
-     D entry_t         DS                  based(pDummy)   qualified
+     D entry_t         DS                  template   qualified
      D  type                               like(ifs_type_t)
      D  path                               like(ifs_path_t)
       /else
-     D resultSet_t     DS                  based(pDummy)   qualified
+     D resultSet_t     DS                  template   qualified
      D  selectedPath                       like(ifs_path_t)
      D  msg                                likeds(msg_t   )
      D  numE                         10I 0
      D  entry                              likeds(entry_t) dim(10)
       *
-     D entry_t         DS                  based(pDummy)   qualified
+     D entry_t         DS                  template   qualified
      D  type                               like(ifs_type_t)
      D  path                               like(ifs_path_t)
       /endif

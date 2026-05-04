@@ -124,7 +124,7 @@
       *-------------------------------------------------------------------------
       /COPY QIFS,PIFS
       *
-     D ifs_pathV_t     S            256A   varying                 based(pDummy)
+     D ifs_pathV_t     S            256A   varying                 template
       *
       *-------------------------------------------------------------------------
       *  Private prototypes

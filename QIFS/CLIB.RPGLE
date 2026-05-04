@@ -5,15 +5,15 @@
       /if not defined(C_DATA_TYPES)
       /define C_DATA_TYPES
       * C Data Types
-     d char_t          s              1a   based(pDummy)
-     d short_t         s              5i 0 based(pDummy)
-     d ushort_t        s              5u 0 based(pDummy)
-     d int_t           s             10i 0 based(pDummy)
-     d uint_t          s             10u 0 based(pDummy)
-     d long_t          s             10i 0 based(pDummy)
-     d ulong_t         s             10u 0 based(pDummy)
-     d float_t         s              4f   based(pDummy)
-     d double_t        s              8f   based(pDummy)
+     d char_t          s              1a   template
+     d short_t         s              5i 0 template
+     d ushort_t        s              5u 0 template
+     d int_t           s             10i 0 template
+     d uint_t          s             10u 0 template
+     d long_t          s             10i 0 template
+     d ulong_t         s             10u 0 template
+     d float_t         s              4f   template
+     d double_t        s              8f   template
       /endif
       *
       *  stdin, stdout and stderr
@@ -50,7 +50,7 @@
      d  format                         *   value options(*string)
      d  timeptr                            const  likeds(tm_t)
       *
-     d tm_t            ds                  qualified  based(pDummy)
+     d tm_t            ds                  qualified  template
      d  tm_sec                       10i 0
      d  tm_min                       10i 0
      d  tm_hour                      10i 0
@@ -261,7 +261,7 @@
       *                        to a multiple of 16
       *   overhead_bytes     - bytes used for malloc overhead
      d C_mallinfo_t...
-     d                 ds                  qualified               based(pDummy)
+     d                 ds                  qualified               template
      d  total_bytes...
      d                               20i 0
      d  allocated_bytes...
@@ -344,12 +344,12 @@
      d  i_toCode                       *   value
      d  i_fromCode                     *   value
       *
-     d iconv_t         ds                  qualified   based(pDummy)   align
+     d iconv_t         ds                  qualified   template   align
      d  return_value                 10i 0
      d  cd                           10i 0 dim(12)
       *
      d iconv_fromcode_t...
-     d                 ds                  qualified   based(pDummy)
+     d                 ds                  qualified   template
      d  ibmccsid                      8a
      d  ccsid                         5a
      d  convAlt                       3a
@@ -360,7 +360,7 @@
      d  reserved                     12a
       *
      d iconv_tocode_t...
-     d                 ds                  qualified   based(pDummy)
+     d                 ds                  qualified   template
      d  ibmccsid                      8a
      d  ccsid                         5a
      d  reserved                     19a
@@ -373,7 +373,7 @@
      d  i_fromCode                         const  likeds(QtqCode_t)
       *
      d QtqCode_t...
-     d                 ds                  qualified   based(pDummy)
+     d                 ds                  qualified   template
      d  ccsid                        10i 0
      d  conversionA                  10i 0
      d  substitutionA                10i 0
@@ -416,7 +416,7 @@
      d  i_pPath                        *   value options(*string)               = *path
      d  i_pStat                        *   value                                = *buf
       *
-     d st_stat_t       ds                  qualified   based(pDummy)   align
+     d st_stat_t       ds                  qualified   template   align
      d  mode                         10u 0                                      mode_t =uint
      d  ino                          10u 0                                      ino_t  =uint
      d  nlink                         5u 0                                      nlink_t=ushort
@@ -455,7 +455,7 @@
       /if not defined(Qlg_Path_Name)
       /define Qlg_Path_Name
      d Qlg_Path_Name_t...
-     d                 ds                  qualified align         based(pDummy)
+     d                 ds                  qualified align         template
      d   CCSID                       10i 0
      d   Country_ID                   2a
      d   Language_ID                  3a
@@ -493,12 +493,12 @@
       /endif
       *
      d Qlg_attrArray_t...
-     d                 ds                  qualified               based(pDummy)
+     d                 ds                  qualified               template
      d  numE                         10i 0
      d  attr                         10i 0 dim(64)
       *
      d Qlg_rtnAttr_t...
-     d                 ds                  qualified               based(pDummy)
+     d                 ds                  qualified               template
      d  ofsNextAttr                  10i 0
      d  ID                           10i 0
      d  size                         10i 0
@@ -567,10 +567,10 @@
      d  i_path                         *   value  options(*string)
       *
       *  QSYSINC/SYS.TYPES
-     d off_t           s             10i 0 based(pDummy)
-     d size_t          s             10u 0 based(pDummy)
-     d ssize_t         s             10i 0 based(pDummy)
-     d time_t          s             10i 0 based(pDummy)
+     d off_t           s             10i 0 template
+     d size_t          s             10u 0 template
+     d ssize_t         s             10i 0 template
+     d time_t          s             10i 0 template
       *
       *  0/-1 = chmod()--Change File Authorizations         include <sys/stat.h>
      d chmod...
@@ -599,7 +599,7 @@
      d                 pr              *          extproc('readdir')            = *dirent
      d  i_dirp                         *   value                                = *DIR
       *
-     d dirent_t        ds                  qualified  based(pDummy)
+     d dirent_t        ds                  qualified  template
      d   d_reserv1                   16a
      d   d_fileno_gen_id...
      d                               10u 0
@@ -615,7 +615,7 @@
      d   d_namelen                   10u 0
      d   d_name                     640A
       *
-     d qlg_nls_t       ds                  qualified  based(pDummy)    align
+     d qlg_nls_t       ds                  qualified  template    align
      d  ccsid                        10i 0
      d  country_id                    2a
      d  language_id                   3a
@@ -938,7 +938,7 @@
      d  uuid_template                  *   value
       *
      d uuid_template_t...
-     d                 ds                  qualified  based(pDummy)
+     d                 ds                  qualified  template
      d  bytPrv                       10u 0
      d  bytAvl                       10u 0
      d  reserved                      8a
@@ -965,7 +965,7 @@
      d                                 *   value
      d                                 *   const
       *
-     d cipherCtrls_t   ds                  qualified  based(pDummy)  align
+     d cipherCtrls_t   ds                  qualified  template  align
      d  function               1      2a
      d  hashAlg                3      3a
      d  sequence               4      4a
