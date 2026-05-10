@@ -1,356 +1,330 @@
-      *===============================================================*
-      *    CALL PGM(IFSTEST_04) PARM('/home/raddatz/genStrCmp/*')     *
-      *===============================================================*
-      *   >>PRE-COMPILER<<                                            *
-      *                                                               *
-      *     >>CRTCMD<<  CRTRPGMOD    MODULE(&LI/&OB) +                *
-      *                              SRCFILE(&SL/&SF) +               *
-      *                              SRCMBR(&SM);                     *
-      *                                                               *
-      *     >>COMPILE<<                                               *
-      *       >>PARM<< TRUNCNBR(*NO);                                 *
-      *       >>PARM<< DBGVIEW(*LIST);                                *
-      *       >>PARM<< TGTRLS(*CURRENT);                              *
-      *     >>END-COMPILE<<                                           *
-      *                                                               *
-      *     >>EXECUTE<<                                               *
-      *                                                               *
-      *     >>CMD<<     CRTPGM       PGM(&LI/&OB) +                   *
-      *                              MODULE(&LI/&OB) +                *
-      *                              ACTGRP(*NEW) +                   *
-      *                              BNDSRVPGM(&LI/IFS      +         *
-      *                                        &LI/BASICS1) +         *
-      *                              BNDDIR(QC2LE         ) +         *
-      *                              TGTRLS(*CURRENT) +               *
-      *                              DETAIL(*BASIC);                  *
-      *                                                               *
-      *   >>END-PRE-COMPILER<<                                        *
-      *===============================================================*
-     H DEBUG
-     H OPTION(*SRCSTMT : *NODEBUGIO)
-     H DECEDIT('0,') DATEDIT(*DMY.)
-     H DATFMT(*ISO )  TIMFMT(*ISO )
-     H EXPROPTS(*RESDECPOS)
-     H EXTBININT(*YES)
-      *===============================================================*
-      *
-      * ------------------------------------
-      *  Type Definitions
-      * ------------------------------------
-      /if not defined(*V5R2M0)
-     D resultSet_t     DS                  template   qualified
-     D  selectedPath                       like(ifs_path_t)
-     D  msg                                like(msg_t   )
-     D  numE                         10I 0
-     D  entry                              like(entry_t) dim(10)
-      *
-     D entry_t         DS                  template   qualified
-     D  type                               like(ifs_type_t)
-     D  path                               like(ifs_path_t)
-      /else
-     D resultSet_t     DS                  template   qualified
-     D  selectedPath                       like(ifs_path_t)
-     D  msg                                likeds(msg_t   )
-     D  numE                         10I 0
-     D  entry                              likeds(entry_t) dim(10)
-      *
-     D entry_t         DS                  template   qualified
-     D  type                               like(ifs_type_t)
-     D  path                               like(ifs_path_t)
-      /endif
-      *
-      * ------------------------------------
-      *  External Prototypes
-      * ------------------------------------
-      /COPY QIFS,PIFS
-      *
-      * ------------------------------------
-      *  Global Fields
-      * ------------------------------------
-      *
-      * ------------------------------------
-      *  Global Constants
-      * ------------------------------------
-      *
-      * ------------------------------------
-      *  Prototypes
-      * ------------------------------------
-      *
-     D PGM_ENTRY_POINT...
-     D                 PR                         extpgm('IFSTEST_04')
-     D  gi_path                      32A   const
-      *
-     D main...
-     D                 PR
-     D  i_path                       32A   const
-      *
-      *===============================================================*
-      *  Program Entry Point
-      *===============================================================*
-      *
-     D PGM_ENTRY_POINT...
-     D                 PI
-     D  gi_path                      32A   const
-      * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-      /FREE
+**FREE
+//===============================================================*
+//    CALL PGM(IFSTEST_04) PARM('/home/raddatz/genStrCmp/*')     *
+//===============================================================*
+//   >>PRE-COMPILER<<                                            *
+//                                                               *
+//     >>CRTCMD<<  CRTRPGMOD    MODULE(&LI/&OB) +                *
+//                              SRCFILE(&SL/&SF) +               *
+//                              SRCMBR(&SM);                     *
+//                                                               *
+//     >>COMPILE<<                                               *
+//       >>PARM<< TRUNCNBR(*NO);                                 *
+//       >>PARM<< DBGVIEW(*LIST);                                *
+//       >>PARM<< TGTRLS(*CURRENT);                              *
+//     >>END-COMPILE<<                                           *
+//                                                               *
+//     >>EXECUTE<<                                               *
+//                                                               *
+//     >>CMD<<     CRTPGM       PGM(&LI/&OB) +                   *
+//                              MODULE(&LI/&OB) +                *
+//                              ACTGRP(*NEW) +                   *
+//                              BNDSRVPGM(&LI/IFS      +         *
+//                                        &LI/BASICS1) +         *
+//                              BNDDIR(QC2LE         ) +         *
+//                              TGTRLS(*CURRENT) +               *
+//                              DETAIL(*BASIC);                  *
+//                                                               *
+//   >>END-PRE-COMPILER<<                                        *
+//===============================================================*
+CTL-OPT DEBUG OPTION(*SRCSTMT: *NODEBUGIO);
+CTL-OPT DECEDIT('0,') DATEDIT(*DMY.);
+CTL-OPT DATFMT(*ISO) TIMFMT(*ISO);
+CTL-OPT EXPROPTS(*RESDECPOS);
+CTL-OPT EXTBININT(*YES);
+//===============================================================*
+//
+// ------------------------------------
+//  Type Definitions
+// ------------------------------------
+/IF not defined(*V5R2M0)
+DCL-DS resultSet_t TEMPLATE QUALIFIED;
+  selectedPath LIKE(ifs_path_t);
+  msg          LIKE(msg_t);
+  numE         INT(10);
+  entry        LIKE(entry_t) DIM(10);
+END-DS;
 
-         main(gi_path);
+DCL-DS entry_t TEMPLATE QUALIFIED;
+  type LIKE(ifs_type_t);
+  path LIKE(ifs_path_t);
+END-DS;
+/ELSE
+DCL-DS resultSet_t TEMPLATE QUALIFIED;
+  selectedPath LIKE(ifs_path_t);
+  msg          LIKEDS(msg_t);
+  numE         INT(10);
+  entry        LIKEDS(entry_t) DIM(10);
+END-DS;
 
-         *inlr = *on;
+DCL-DS entry_t TEMPLATE QUALIFIED;
+  type LIKE(ifs_type_t);
+  path LIKE(ifs_path_t);
+END-DS;
+/ENDIF
 
-         return;
+// ------------------------------------
+//  External Prototypes
+// ------------------------------------
+/COPY QIFS,PIFS
 
-      /END-FREE
-      *
-      *===============================================================*
-      *  Main procedure
-      *===============================================================*
-     P main...
-     P                 B
-      *
-     D main...
-     D                 PI
-     D  i_path                       32A   const
-      *
-      *  Helper fields
-     D x               S             10I 0                     inz
-     D numEntries      S             10I 0                     inz
-     D resultSet1      DS                  likeds(resultSet_t) inz
-     D resultSet2      DS                  likeds(resultSet_t) inz
-      /if not defined(*V5R2M0)
-     D entryElem       DS                  likeds(entry_t)
-     D                                     based(pEntryElem)
-     D entry1          S                   like(entry_t)       dim(10)
-     D                                     based(pEntry1)
-     D entry2          S                   like(entry_t)       dim(10)
-     D                                     based(pEntry2)
-     D msg1            DS                  likeds(msg_t)
-     D                                     based(pMsg1)
-     D msg2            DS                  likeds(msg_t)
-     D                                     based(pMsg2)
-      /endif
-     D msg             DS                  likeds(msg_t      ) inz
-      * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-      /FREE
+// ------------------------------------
+//  Global Fields
+// ------------------------------------
+//
+// ------------------------------------
+//  Global Constants
+// ------------------------------------
+//
+// ------------------------------------
+//  Prototypes
+// ------------------------------------
 
-         // -----------------------------------------------------
-         // Read directory using callback f_readDirIfs_path.
-         // -----------------------------------------------------
-         clear resultSet1;
-      /if not defined(*V5R2M0)
-         pEntry1 = %addr(resultSet1.entry);
-         pMsg1   = %addr(resultSet1.msg  );
-         clear entry1;
-         clear msg1;
-      /endif
-         resultSet1.selectedPath = f_rtvIfsDirFromPath(i_path);
-         resultSet1.msg          = f_newMsg(cMsg_ID_OK);
-         numEntries = f_readIfsDir(%trim(i_path): %paddr('f_readDirIfs_path'):
-                                   cIFS_READDIR_DFT                          :
-                                   %addr(resultSet1)                         :
-                                   msg                                       );
-         if (msg.ID <> cMsg_ID_OK);
-            f_sndPgmMsg(msg: cMsg_Prv: cMsg_toCtlBdy);
-         endif;
+DCL-PR PGM_ENTRY_POINT EXTPGM('IFSTEST_04');
+  gi_path CHAR(32) CONST;
+END-PR;
 
-      /if not defined(*V5R2M0)
-         if (msg1.ID <> cMsg_ID_OK);
-      /else
-         if (resultSet1.msg.ID <> cMsg_ID_OK);
-      /endif
-            f_sndPgmMsg(resultSet1.msg: cMsg_Prv: cMsg_toCtlBdy);
-         endif;
+DCL-PR main;
+  i_path CHAR(32) CONST;
+END-PR;
 
-         msg = f_newMsg(cMsg_ID_NONE:
-                        'Total number of entries: ' + %char(numEntries));
+//===============================================================*
+//  Program Entry Point
+//===============================================================*
+DCL-PI PGM_ENTRY_POINT;
+  gi_path CHAR(32) CONST;
+END-PI;
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+main(gi_path);
+
+*inlr = *on;
+
+return;
+
+
+//===============================================================*
+//  Main procedure
+//===============================================================*
+DCL-PROC main;
+  DCL-PI *N;
+    i_path CHAR(32) CONST;
+  END-PI;
+
+  //  Helper fields
+  DCL-S x INT(10) INZ;
+  DCL-S numEntries INT(10) INZ;
+  DCL-DS resultSet1 LIKEDS(resultSet_t) INZ;
+  DCL-DS resultSet2 LIKEDS(resultSet_t) INZ;
+/IF not defined(*V5R2M0)
+  DCL-DS entryElem LIKEDS(entry_t) BASED(pEntryElem);
+  DCL-S entry1 LIKE(entry_t) DIM(10) BASED(pEntry1);
+  DCL-S entry2 LIKE(entry_t) DIM(10) BASED(pEntry2);
+  DCL-DS msg1 LIKEDS(msg_t) BASED(pMsg1);
+  DCL-DS msg2 LIKEDS(msg_t) BASED(pMsg2);
+/ENDIF
+  DCL-DS msg LIKEDS(msg_t) INZ;
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  // -----------------------------------------------------
+  // Read directory using callback f_readDirIfs_path.
+  // -----------------------------------------------------
+clear resultSet1;
+/IF not defined(*V5R2M0)
+pEntry1 = %addr(resultSet1.entry);
+pMsg1   = %addr(resultSet1.msg  );
+clear entry1;
+clear msg1;
+/ENDIF
+resultSet1.selectedPath = f_rtvIfsDirFromPath(i_path);
+resultSet1.msg          = f_newMsg(cMsg_ID_OK);
+numEntries = f_readIfsDir(%trim(i_path): %paddr('f_readDirIfs_path'):
+                          cIFS_READDIR_DFT                          :
+                          %addr(resultSet1)                         :
+                          msg                                       );
+if (msg.ID <> cMsg_ID_OK);
+   f_sndPgmMsg(msg: cMsg_Prv: cMsg_toCtlBdy);
+endif;
+
+/IF not defined(*V5R2M0)
+if (msg1.ID <> cMsg_ID_OK);
+/ELSE
+   if (resultSet1.msg.ID <> cMsg_ID_OK);
+/ENDIF
+      f_sndPgmMsg(resultSet1.msg: cMsg_Prv: cMsg_toCtlBdy);
+   endif;
+
+   msg = f_newMsg(cMsg_ID_NONE:
+                  'Total number of entries: ' + %char(numEntries));
+   f_sndPgmMsg(msg: cMsg_Prv: cMsg_toCtlBdy);
+
+   for x = 1 to resultSet1.numE;
+/IF not defined(*V5R2M0)
+      pEntryElem = %addr(entry1) + ((x-1) * %size(entry1));
+      msg = f_newMsg(cMsg_ID_NONE: entryElem.type + ': ' +
+                                   entryElem.path);
+/ELSE
+      msg = f_newMsg(cMsg_ID_NONE: resultSet1.entry(x).type + ': ' +
+                                   resultSet1.entry(x).path);
+/ENDIF
+      f_sndPgmMsg(msg: cMsg_Prv: cMsg_toCtlBdy);
+   endfor;
+
+  // -----------------------------------------------------
+  // Read directory using callback f_readDirIfs_dirent.
+  // -----------------------------------------------------
+   clear resultSet2;
+/IF not defined(*V5R2M0)
+   pEntry2 = %addr(resultSet2.entry);
+   pMsg2   = %addr(resultSet2.msg  );
+   clear entry2;
+   clear msg2;
+/ENDIF
+   resultSet2.selectedPath = f_rtvIfsDirFromPath(i_path);
+   resultSet2.msg          = f_newMsg(cMsg_ID_OK);
+  numEntries = f_readIfsDir(%trim(i_path): %paddr('f_readDirIfs_dirent'):
+                            cIFS_READDIR_FILES +
+                            cIFS_READDIR_DIR   +
+                            cIFS_READDIR_CB_DIRENT                      :
+                            %addr(resultSet2)                           :
+                            msg                                        );
+   if (msg.ID <> cMsg_ID_OK);
+      f_sndPgmMsg(msg: cMsg_Prv: cMsg_toCtlBdy);
+   endif;
+
+/IF not defined(*V5R2M0)
+   if (msg2.ID <> cMsg_ID_OK);
+/ELSE
+      if (resultSet2.msg.ID <> cMsg_ID_OK);
+/ENDIF
+         f_sndPgmMsg(resultSet2.msg: cMsg_Prv: cMsg_toCtlBdy);
+      endif;
+
+      msg = f_newMsg(cMsg_ID_NONE:
+                     'Total number of entries: ' + %char(numEntries));
+      f_sndPgmMsg(msg: cMsg_Prv: cMsg_toCtlBdy);
+
+      for x = 1 to resultSet2.numE;
+/IF not defined(*V5R2M0)
+         pEntryElem = %addr(entry2) + ((x-1) * %size(entry2));
+         msg = f_newMsg(cMsg_ID_NONE: entryElem.type + ': ' +
+                                      entryElem.path);
+/ELSE
+         msg = f_newMsg(cMsg_ID_NONE: resultSet2.entry(x).type + ': ' +
+                                      resultSet2.entry(x).path);
+/ENDIF
          f_sndPgmMsg(msg: cMsg_Prv: cMsg_toCtlBdy);
+      endfor;
 
-         for x = 1 to resultSet1.numE;
-      /if not defined(*V5R2M0)
-            pEntryElem = %addr(entry1) + ((x-1) * %size(entry1));
-            msg = f_newMsg(cMsg_ID_NONE: entryElem.type + ': ' +
-                                         entryElem.path);
-      /else
-            msg = f_newMsg(cMsg_ID_NONE: resultSet1.entry(x).type + ': ' +
-                                         resultSet1.entry(x).path);
-      /endif
-            f_sndPgmMsg(msg: cMsg_Prv: cMsg_toCtlBdy);
-         endfor;
+      return;
 
-         // -----------------------------------------------------
-         // Read directory using callback f_readDirIfs_dirent.
-         // -----------------------------------------------------
-         clear resultSet2;
-      /if not defined(*V5R2M0)
-         pEntry2 = %addr(resultSet2.entry);
-         pMsg2   = %addr(resultSet2.msg  );
-         clear entry2;
-         clear msg2;
-      /endif
-         resultSet2.selectedPath = f_rtvIfsDirFromPath(i_path);
-         resultSet2.msg          = f_newMsg(cMsg_ID_OK);
-         numEntries = f_readIfsDir(%trim(i_path): %paddr('f_readDirIfs_dirent'):
-                                  cIFS_READDIR_FILES +
-                                  cIFS_READDIR_DIR   +
-                                  cIFS_READDIR_CB_DIRENT                      :
-                                  %addr(resultSet2)                           :
-                                   msg                                        );
-         if (msg.ID <> cMsg_ID_OK);
-            f_sndPgmMsg(msg: cMsg_Prv: cMsg_toCtlBdy);
+
+END-PROC MAIN;
+
+//===============================================================*
+//  Callback: f_readDirIfs_path()
+//===============================================================*
+DCL-PROC f_readDirIfs_path EXPORT;
+  DCL-PI *N IND;
+    i_level     INT(10) VALUE;
+    i_directory LIKE(ifs_path_t) VALUE;
+    i_entry     LIKE(ifs_path_t) VALUE;
+    i_type      LIKE(ifs_type_t) VALUE;
+    i_pUsrDta   POINTER VALUE;
+    o_msg       LIKE(msg_t) VALUE;
+  END-PI;
+
+  //  Return value
+  DCL-S isOK IND INZ(cFalse);
+
+  //  User data passed to f_readIfsDir( ... : %addr(resultSet1): ... )
+  DCL-DS resultSet LIKEDS(resultSet_t) BASED(i_pUsrDta);
+/IF not defined(*V5R2M0)
+  DCL-DS entryElem LIKEDS(entry_t) BASED(pEntryElem);
+  DCL-S entry LIKE(entry_t) DIM(10) BASED(pEntry);
+  DCL-DS msg LIKEDS(msg_t) BASED(pMsg);
+/ENDIF
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/IF not defined(*V5R2M0)
+      pEntry = %addr(resultSet.entry);
+      pMsg   = %addr(resultSet.msg  );
+/ENDIF
+
+      if   %trimR(i_directory) = %trimR(resultSet.selectedPath);
+         if resultSet.numE < %elem(resultSet.entry);
+            resultSet.numE = resultSet.numE + 1;
+/IF not defined(*V5R2M0)
+         pEntryElem = %addr(entry) + ((resultSet.numE-1) * %size(entry));
+            entryElem.path = i_entry;
+            entryElem.type = i_type;
+/ELSE
+            resultSet.entry(resultSet.numE).path = i_entry;
+            resultSet.entry(resultSet.numE).type = i_type;
+/ENDIF
+         else;
+            resultSet.msg = f_newMsg('CPF9898':
+                                     'Result set overflow!': cMsg_Diag);
          endif;
+      endif;
 
-      /if not defined(*V5R2M0)
-         if (msg2.ID <> cMsg_ID_OK);
-      /else
-         if (resultSet2.msg.ID <> cMsg_ID_OK);
-      /endif
-            f_sndPgmMsg(resultSet2.msg: cMsg_Prv: cMsg_toCtlBdy);
+      isOK = cTrue;
+
+      return   isOK;
+
+
+END-PROC;
+
+//===============================================================*
+//  Callback: f_readDirIfs_dirent()
+//===============================================================*
+DCL-PROC f_readDirIfs_dirent EXPORT;
+  DCL-PI *N IND;
+    i_level     INT(10) VALUE;
+    i_directory LIKE(ifs_path_t) VALUE;
+    i_dirent    LIKEDS(dirent_t) VALUE;
+    i_type      LIKE(ifs_type_t) VALUE;
+    i_pUsrDta   POINTER VALUE;
+    o_msg       LIKE(msg_t) VALUE;
+  END-PI;
+
+  //  Return value
+  DCL-S isOK IND INZ(cFalse);
+
+  //  User data passed to f_readIfsDir( ... : %addr(resultSet2): ... )
+  DCL-DS resultSet LIKEDS(resultSet_t) BASED(i_pUsrDta);
+/IF not defined(*V5R2M0)
+  DCL-DS entryElem LIKEDS(entry_t) BASED(pEntryElem);
+  DCL-S entry LIKE(entry_t) DIM(10) BASED(pEntry);
+  DCL-DS msg LIKEDS(msg_t) BASED(pMsg);
+/ENDIF
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/IF not defined(*V5R2M0)
+      pEntry = %addr(resultSet.entry);
+      pMsg   = %addr(resultSet.msg  );
+/ENDIF
+
+      if   %trimR(i_directory) = %trimR(resultSet.selectedPath);
+         if resultSet.numE < %elem(resultSet.entry);
+            resultSet.numE = resultSet.numE + 1;
+/IF not defined(*V5R2M0)
+         pEntryElem = %addr(entry) + ((resultSet.numE-1) * %size(entry));
+            entryElem.path = %subst(i_dirent.d_name: 1:
+                                    i_dirent.d_namelen);
+            entryElem.type = i_type;
+/ELSE
+         resultSet.entry(resultSet.numE).path =%subst(i_dirent.d_name: 1:
+                                                     i_dirent.d_namelen);
+            resultSet.entry(resultSet.numE).type = i_type;
+/ENDIF
+         else;
+            resultSet.msg = f_newMsg('CPF9898':
+                                     'Result set overflow!': cMsg_Diag);
          endif;
+      endif;
 
-         msg = f_newMsg(cMsg_ID_NONE:
-                        'Total number of entries: ' + %char(numEntries));
-         f_sndPgmMsg(msg: cMsg_Prv: cMsg_toCtlBdy);
+      isOK = cTrue;
 
-         for x = 1 to resultSet2.numE;
-      /if not defined(*V5R2M0)
-            pEntryElem = %addr(entry2) + ((x-1) * %size(entry2));
-            msg = f_newMsg(cMsg_ID_NONE: entryElem.type + ': ' +
-                                         entryElem.path);
-      /else
-            msg = f_newMsg(cMsg_ID_NONE: resultSet2.entry(x).type + ': ' +
-                                         resultSet2.entry(x).path);
-      /endif
-            f_sndPgmMsg(msg: cMsg_Prv: cMsg_toCtlBdy);
-         endfor;
+      return   isOK;
 
-         return;
 
-      /END-FREE
-      *
-     P main...
-     P                 E
-      *
-      *===============================================================*
-      *  Callback: f_readDirIfs_path()
-      *===============================================================*
-     P f_readDirIfs_path...
-     P                 B                   export
-      *
-     D f_readDirIfs_path...
-     D                 PI              N
-     D  i_level                      10I 0 value
-     D  i_directory                        value  like(ifs_path_t    )
-     D  i_entry                            value  like(ifs_path_t    )
-     D  i_type                             value  like(ifs_type_t    )
-     D  i_pUsrDta                      *   value
-     D  o_msg                              value  like(msg_t         )
-      *
-      *  Return value
-     D isOK            S               N   inz(cFalse)
-      *
-      *  User data passed to f_readIfsDir( ... : %addr(resultSet1): ... )
-     D resultSet       DS                  likeds(resultSet_t) based(i_pUsrDta)
-      /if not defined(*V5R2M0)
-     D entryElem       DS                  likeds(entry_t)
-     D                                     based(pEntryElem)
-     D entry           S                   like(entry_t)       dim(10)
-     D                                     based(pEntry)
-     D msg             DS                  likeds(msg_t)
-     D                                     based(pMsg)
-      /endif
-      * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-      /FREE
-      /if not defined(*V5R2M0)
-         pEntry = %addr(resultSet.entry);
-         pMsg   = %addr(resultSet.msg  );
-      /endif
-
-         if   %trimR(i_directory) = %trimR(resultSet.selectedPath);
-            if resultSet.numE < %elem(resultSet.entry);
-               resultSet.numE = resultSet.numE + 1;
-      /if not defined(*V5R2M0)
-               pEntryElem = %addr(entry) + ((resultSet.numE-1) * %size(entry));
-               entryElem.path = i_entry;
-               entryElem.type = i_type;
-      /else
-               resultSet.entry(resultSet.numE).path = i_entry;
-               resultSet.entry(resultSet.numE).type = i_type;
-      /endif
-            else;
-               resultSet.msg = f_newMsg('CPF9898':
-                                        'Result set overflow!': cMsg_Diag);
-            endif;
-         endif;
-
-         isOK = cTrue;
-
-         return   isOK;
-
-      /END-FREE
-      *
-     P f_readDirIfs_path...
-     P                 E
-      *
-      *===============================================================*
-      *  Callback: f_readDirIfs_dirent()
-      *===============================================================*
-     P f_readDirIfs_dirent...
-     P                 B                   export
-      *
-     D f_readDirIfs_dirent...
-     D                 PI              N
-     D  i_level                      10I 0 value
-     D  i_directory                        value  like(ifs_path_t    )
-     D  i_dirent                           value  likeds(dirent_t    )
-     D  i_type                             value  like(ifs_type_t    )
-     D  i_pUsrDta                      *   value
-     D  o_msg                              value  like(msg_t         )
-      *
-      *  Return value
-     D isOK            S               N   inz(cFalse)
-      *
-      *  User data passed to f_readIfsDir( ... : %addr(resultSet2): ... )
-     D resultSet       DS                  likeds(resultSet_t) based(i_pUsrDta)
-      /if not defined(*V5R2M0)
-     D entryElem       DS                  likeds(entry_t)
-     D                                     based(pEntryElem)
-     D entry           S                   like(entry_t)       dim(10)
-     D                                     based(pEntry)
-     D msg             DS                  likeds(msg_t)
-     D                                     based(pMsg)
-      /endif
-      * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-      /FREE
-      /if not defined(*V5R2M0)
-         pEntry = %addr(resultSet.entry);
-         pMsg   = %addr(resultSet.msg  );
-      /endif
-
-         if   %trimR(i_directory) = %trimR(resultSet.selectedPath);
-            if resultSet.numE < %elem(resultSet.entry);
-               resultSet.numE = resultSet.numE + 1;
-      /if not defined(*V5R2M0)
-               pEntryElem = %addr(entry) + ((resultSet.numE-1) * %size(entry));
-               entryElem.path = %subst(i_dirent.d_name: 1:
-                                       i_dirent.d_namelen);
-               entryElem.type = i_type;
-      /else
-               resultSet.entry(resultSet.numE).path =%subst(i_dirent.d_name: 1:
-                                                            i_dirent.d_namelen);
-               resultSet.entry(resultSet.numE).type = i_type;
-      /endif
-            else;
-               resultSet.msg = f_newMsg('CPF9898':
-                                        'Result set overflow!': cMsg_Diag);
-            endif;
-         endif;
-
-         isOK = cTrue;
-
-         return   isOK;
-
-      /END-FREE
-      *
-     P f_readDirIfs_dirent...
-     P                 E
-      *
+END-PROC;

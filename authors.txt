@@ -1,0 +1,5 @@
+tools400  =  Thomas Raddatz <thomas.raddatz@tools400.de>
+
+
+
+# git svn clone -s https://svn.code.sf.net/p/tools400/code/rpg-srvpgm/IFS     --authors-file authors.txt

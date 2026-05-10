@@ -1,12 +1,13 @@
-      *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1027
-      *
-      * &1[1027] Berechtigungen für Verzeichnis nicht gesetzt. Der
-      *
-     D IFS1027         DS
-     D  IFS10271                    001A   INZ(*BLANKS)
-     D  IFS10272                    128A   INZ(*BLANKS)
-     D  IFS10273                    010P 0 INZ(*ZEROS )
-     D  IFS10274                    128A   INZ(*BLANKS)
-     D IFS1027#        S              8B 0 INZ(0263)
-      *
+**free
+//---------------------------------------------------------------
+// Datenstruktur fr Message-ID : IFS1027
+
+// &1[1027] Berechtigungen fr Verzeichnis nicht gesetzt. Der
+
+dcl-ds IFS1027;
+  IFS10271 char(001) inz(*blanks);
+  IFS10272 char(128) inz(*blanks);
+  IFS10273 packed(010) inz(*zeros);
+  IFS10274 char(128) inz(*blanks);
+end-ds;
+dcl-s IFS1027# bindec(8) inz(0263);

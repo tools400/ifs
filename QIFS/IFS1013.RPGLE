@@ -1,10 +1,11 @@
-      *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1013
-      *
-      * &1[1013] IFS-Datei existiert.
-      *
-     D IFS1013         DS
-     D  IFS10131                    001A   INZ(*BLANKS)
-     D  IFS10132                    128A   INZ(*BLANKS)
-     D IFS1013#        S              8B 0 INZ(0129)
-      *
+**free
+//---------------------------------------------------------------
+// Datenstruktur fr Message-ID : IFS1013
+
+// &1[1013] IFS-Datei existiert.
+
+dcl-ds IFS1013;
+  IFS10131 char(001) inz(*blanks);
+  IFS10132 char(128) inz(*blanks);
+end-ds;
+dcl-s IFS1013# bindec(8) inz(0129);

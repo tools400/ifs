@@ -1,12 +1,13 @@
-      *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1033
-      *
-      * &1[1033] Das angegebene Verzeichnis '&2' konnte nicht angel
-      *
-     D IFS1033         DS
-     D  IFS10331                    001A   INZ(*BLANKS)
-     D  IFS10332                    128A   INZ(*BLANKS)
-     D  IFS10333                    010P 0 INZ(*ZEROS )
-     D  IFS10334                    128A   INZ(*BLANKS)
-     D IFS1033#        S              8B 0 INZ(0263)
-      *
+**free
+//---------------------------------------------------------------
+// Datenstruktur fr Message-ID : IFS1033
+
+// &1[1033] Das angegebene Verzeichnis '&2' konnte nicht angel
+
+dcl-ds IFS1033;
+  IFS10331 char(001) inz(*blanks);
+  IFS10332 char(128) inz(*blanks);
+  IFS10333 packed(010) inz(*zeros);
+  IFS10334 char(128) inz(*blanks);
+end-ds;
+dcl-s IFS1033# bindec(8) inz(0263);

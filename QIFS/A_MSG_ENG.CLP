@@ -16,7 +16,7 @@
              DCL        VAR(&LI) TYPE(*CHAR) LEN(10)
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1000                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1000                    */
      /* &1[1000] File '&2' has not been opend. Error code &3.       */
      /* ----------------------------------------------------------- */
 
@@ -42,7 +42,7 @@ e &3 when attemting to open file ''&2''. The error text is: ''&4''.'  +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1001                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1001                    */
      /* &1[1001] File '&2' has not been closed. Error code &3.      */
      /* ----------------------------------------------------------- */
 
@@ -68,7 +68,7 @@ de &3 when attemting to close file ''&2''. The error text is: ''&4''.'+
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1002                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1002                    */
      /* &1[1002] Data has not been written to file '&2'. Error code */
      /* ----------------------------------------------------------- */
 
@@ -95,7 +95,7 @@ de &3 when attemting to write to file ''&2''. The error text is: ''&4'-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1003                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1003                    */
      /* &1[1003] File '&2' has not been moved to '&3'. Error code & */
      /* ----------------------------------------------------------- */
 
@@ -123,7 +123,7 @@ text is: ''&5''.'                                                     +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1004                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1004                    */
      /* &1[1004] Data has not been red from file '&2'. Error code & */
      /* ----------------------------------------------------------- */
 
@@ -150,7 +150,7 @@ e &3 when attemting to read from file ''&2''. The error text is: ''&4'-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1005                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1005                    */
      /* &1[1005] File '&2' has not been deleted. Error code &3.     */
      /* ----------------------------------------------------------- */
 
@@ -177,7 +177,7 @@ ode &3 when attemting to delete file ''&2''. The error text is: ''&4''-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1006                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1006                    */
      /* &1[1006] The size of file '&2' has not been retrieved. Erro */
      /* ----------------------------------------------------------- */
 
@@ -205,7 +205,7 @@ ext is: ''&4''.'                                                      +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1007                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1007                    */
      /* &1[1007] The size of file '&2' has not been changed. Error  */
      /* ----------------------------------------------------------- */
 
@@ -233,7 +233,7 @@ t is: ''&4''.'                                                        +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1008                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1008                    */
      /* &1[1008] The offset of the read/write pointer of file '&2'  */
      /* ----------------------------------------------------------- */
 
@@ -263,7 +263,7 @@ de &3 when attemting set the new file offset. The error text is: ''&4'-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1009                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1009                    */
      /* &1[1009] File '&2' has not been renamed to '&3'. Error code */
      /* ----------------------------------------------------------- */
 
@@ -291,7 +291,7 @@ ror text is: ''&5''.'                                                 +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1011                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1011                    */
      /* &1[1011] Directory '&2' has not been found.                 */
      /* ----------------------------------------------------------- */
 
@@ -315,7 +315,7 @@ ror text is: ''&5''.'                                                 +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1012                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1012                    */
      /* &1[1012] File '&2' has not been found.                      */
      /* ----------------------------------------------------------- */
 
@@ -339,7 +339,7 @@ ror text is: ''&5''.'                                                 +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1013                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1013                    */
      /* &1[1013] File '&2' exists.                                  */
      /* ----------------------------------------------------------- */
 
@@ -363,7 +363,7 @@ ror text is: ''&5''.'                                                 +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1014                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1014                    */
      /* &1[1014] File name '&2' contains invalid characters.        */
      /* ----------------------------------------------------------- */
 
@@ -387,7 +387,7 @@ ror text is: ''&5''.'                                                 +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1015                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1015                    */
      /* &1[1015] Directory '&2' exists.                             */
      /* ----------------------------------------------------------- */
 
@@ -411,7 +411,7 @@ ror text is: ''&5''.'                                                 +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1016                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1016                    */
      /* &1[1016] Buffer overflow occurred while reading from IFS fi */
      /* ----------------------------------------------------------- */
 
@@ -438,7 +438,7 @@ es was too small to read a line completely.'                          +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1017                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1017                    */
      /* &1[1017] Entry has not been red from directory '&2'.        */
      /* ----------------------------------------------------------- */
 
@@ -465,7 +465,7 @@ The error text is: ''&4''.'                                           +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1018                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1018                    */
      /* &1[1018] Attributes of file '&2' not retrieved.             */
      /* ----------------------------------------------------------- */
 
@@ -492,7 +492,7 @@ text is: ''&4''.'                                                     +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1019                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1019                    */
      /* &1[1019] Directory '&2' not opened.                         */
      /* ----------------------------------------------------------- */
 
@@ -519,7 +519,7 @@ code &3 when attempting to open directory ''&2''. The error text is: '-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1020                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1020                    */
      /* &1[1020] Directory '&2' not closed.                         */
      /* ----------------------------------------------------------- */
 
@@ -546,7 +546,7 @@ code &3 when attempting to open directory ''&2''. The error text is: '-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1021                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1021                    */
      /* &1[1021] The creation time of file '&2' has not been retrie */
      /* ----------------------------------------------------------- */
 
@@ -574,7 +574,7 @@ rror text is: ''&4''.'                                                +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1022                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1022                    */
      /* &1[1022] The time the data of file '&2' was last changed ha */
      /* ----------------------------------------------------------- */
 
@@ -602,7 +602,7 @@ rror text is: ''&4''.'                                                +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1023                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1023                    */
      /* &1[1023] Cannot produce temporary path name. Error code &2. */
      /* ----------------------------------------------------------- */
 
@@ -628,7 +628,7 @@ xt is: ''&3''.'                                                       +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1024                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1024                    */
      /* &1[1024] Invalid path name.                                 */
      /* ----------------------------------------------------------- */
 
@@ -653,7 +653,7 @@ Please check the directory for invalid characters and ensure it is not-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1025                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1025                    */
      /* &1[1025] Failed to retrieve permissions and privileges of f */
      /* ----------------------------------------------------------- */
 
@@ -681,7 +681,7 @@ e &3 when attemting to retrieve the status of file or directory ''&2''-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1026                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1026                    */
      /* &1[1026] Failed to create directory with error code &3.     */
      /* ----------------------------------------------------------- */
 
@@ -708,7 +708,7 @@ de &3 when attemting to create directory ''&2''. The error text is: ''-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1027                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1027                    */
      /* &1[1027] Could not set permissions for directory. Error cod */
      /* ----------------------------------------------------------- */
 
@@ -735,7 +735,7 @@ or text is: ''&4'''                                                   +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1028                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1028                    */
      /* &1[1028] The unique file identifier of file '&2' has not be */
      /* ----------------------------------------------------------- */
 
@@ -763,7 +763,7 @@ e &3 when attemting to retrieve the unique file identifier of file ''&-
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1029                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1029                    */
      /* &1[1029] Failed to get the current working directory. Error */
      /* ----------------------------------------------------------- */
 
@@ -788,7 +788,7 @@ rror text is: ''&2''.'                                                +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1030                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1030                    */
      /* &1[1030] Failed to change the current working directory to  */
      /* ----------------------------------------------------------- */
 
@@ -815,7 +815,7 @@ rror text is: ''&3''.'                                                +
                 /*  -EOF-  */
 
      /* ----------------------------------------------------------- */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1031                    */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1031                    */
      /* &1[1031] Failed to delete IFS directory '&2'. Error code &3 */
      /* ----------------------------------------------------------- */
 
@@ -842,7 +842,7 @@ de &3 when attempting to delete directory ''&2''. The error text is : -
                 /*  -EOF-  */
                                                                                       /* RADD */
      /* ----------------------------------------------------------- */                /* RADD */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1032                    */                /* RADD */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1032                    */                /* RADD */
      /* &1[1032] The specified directory '&2' does already exist.   */                /* RADD */
      /* ----------------------------------------------------------- */                /* RADD */
                                                                                       /* RADD */
@@ -866,7 +866,7 @@ he directory does already exist.'                                     +
                 /*  -EOF-  */                                                         /* RADD */
                                                                                       /* RADD */
      /* ----------------------------------------------------------- */                /* RADD */
-     /*   Cmd-ADDMSGD für Message-ID :   IFS1033                    */                /* RADD */
+     /*   Cmd-ADDMSGD fr Message-ID :   IFS1033                    */                /* RADD */
      /* &1[1033] Failed to create directory '&2'.                   */                /* RADD */
      /* ----------------------------------------------------------- */                /* RADD */
                                                                                       /* RADD */

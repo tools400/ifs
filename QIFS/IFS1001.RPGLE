@@ -1,12 +1,13 @@
-      *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1001
-      *
-      * &1[1001] Fehler beim Schließen der IFS-Datei '&2' aufgetret
-      *
-     D IFS1001         DS
-     D  IFS10011                    001A   INZ(*BLANKS)
-     D  IFS10012                    128A   INZ(*BLANKS)
-     D  IFS10013                    010P 0 INZ(*ZEROS )
-     D  IFS10014                    128A   INZ(*BLANKS)
-     D IFS1001#        S              8B 0 INZ(0263)
-      *
+**free
+//---------------------------------------------------------------
+// Datenstruktur fr Message-ID : IFS1001
+
+// &1[1001] Fehler beim Schlieen der IFS-Datei '&2' aufgetret
+
+dcl-ds IFS1001;
+  IFS10011 char(001) inz(*blanks);
+  IFS10012 char(128) inz(*blanks);
+  IFS10013 packed(010) inz(*zeros);
+  IFS10014 char(128) inz(*blanks);
+end-ds;
+dcl-s IFS1001# bindec(8) inz(0263);

@@ -1,12 +1,13 @@
-      *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1026
-      *
-      * &1[1026] Verzeichnis konnte nicht erstellt werden. Der Fehl
-      *
-     D IFS1026         DS
-     D  IFS10261                    001A   INZ(*BLANKS)
-     D  IFS10262                    128A   INZ(*BLANKS)
-     D  IFS10263                    010P 0 INZ(*ZEROS )
-     D  IFS10264                    128A   INZ(*BLANKS)
-     D IFS1026#        S              8B 0 INZ(0263)
-      *
+**free
+//---------------------------------------------------------------
+// Datenstruktur fr Message-ID : IFS1026
+
+// &1[1026] Verzeichnis konnte nicht erstellt werden. Der Fehl
+
+dcl-ds IFS1026;
+  IFS10261 char(001) inz(*blanks);
+  IFS10262 char(128) inz(*blanks);
+  IFS10263 packed(010) inz(*zeros);
+  IFS10264 char(128) inz(*blanks);
+end-ds;
+dcl-s IFS1026# bindec(8) inz(0263);

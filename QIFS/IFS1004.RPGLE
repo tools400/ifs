@@ -1,12 +1,13 @@
-      *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1004
-      *
-      * &1[1004] Fehler beim Lesen aus der IFS-Datei '&2' aufgetret
-      *
-     D IFS1004         DS
-     D  IFS10041                    001A   INZ(*BLANKS)
-     D  IFS10042                    128A   INZ(*BLANKS)
-     D  IFS10043                    010P 0 INZ(*ZEROS )
-     D  IFS10044                    128A   INZ(*BLANKS)
-     D IFS1004#        S              8B 0 INZ(0263)
-      *
+**free
+//---------------------------------------------------------------
+// Datenstruktur fr Message-ID : IFS1004
+
+// &1[1004] Fehler beim Lesen aus der IFS-Datei '&2' aufgetret
+
+dcl-ds IFS1004;
+  IFS10041 char(001) inz(*blanks);
+  IFS10042 char(128) inz(*blanks);
+  IFS10043 packed(010) inz(*zeros);
+  IFS10044 char(128) inz(*blanks);
+end-ds;
+dcl-s IFS1004# bindec(8) inz(0263);

@@ -1,10 +1,11 @@
-      *---------------------------------------------------------------
-      * Datenstruktur für Message-ID : IFS1011
-      *
-      * &1[1011] IFS-Verzeichnis nicht vorhanden.
-      *
-     D IFS1011         DS
-     D  IFS10111                    001A   INZ(*BLANKS)
-     D  IFS10112                    128A   INZ(*BLANKS)
-     D IFS1011#        S              8B 0 INZ(0129)
-      *
+**free
+//---------------------------------------------------------------
+// Datenstruktur fr Message-ID : IFS1011
+
+// &1[1011] IFS-Verzeichnis nicht vorhanden.
+
+dcl-ds IFS1011;
+  IFS10111 char(001) inz(*blanks);
+  IFS10112 char(128) inz(*blanks);
+end-ds;
+dcl-s IFS1011# bindec(8) inz(0129);

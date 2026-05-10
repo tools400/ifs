@@ -1,187 +1,177 @@
-      *===============================================================*
-      *    CALL PGM(IFSTEST_04) PARM('/home/raddatz/genStrCmp/*')     *
-      *===============================================================*
-      *   >>PRE-COMPILER<<                                            *
-      *                                                               *
-      *     >>CRTCMD<<  CRTRPGMOD    MODULE(&LI/&OB) +                *
-      *                              SRCFILE(&SL/&SF) +               *
-      *                              SRCMBR(&SM);                     *
-      *                                                               *
-      *     >>COMPILE<<                                               *
-      *       >>PARM<< TRUNCNBR(*NO);                                 *
-      *       >>PARM<< DBGVIEW(*LIST);                                *
-      *       >>PARM<< TGTRLS(*CURRENT);                              *
-      *     >>END-COMPILE<<                                           *
-      *                                                               *
-      *     >>EXECUTE<<                                               *
-      *                                                               *
-      *     >>CMD<<     CRTPGM       PGM(&LI/&OB) +                   *
-      *                              MODULE(&LI/&OB) +                *
-      *                              ACTGRP(*NEW) +                   *
-      *                              BNDSRVPGM(&LI/IFS      +         *
-      *                                        &LI/BASICS1) +         *
-      *                              BNDDIR(QC2LE         ) +         *
-      *                              TGTRLS(*CURRENT) +               *
-      *                              DETAIL(*BASIC);                  *
-      *                                                               *
-      *   >>END-PRE-COMPILER<<                                        *
-      *===============================================================*
-     H DEBUG
-     H OPTION(*SRCSTMT : *NODEBUGIO)
-     H DECEDIT('0,') DATEDIT(*DMY.)
-     H DATFMT(*ISO )  TIMFMT(*ISO )
-     H EXPROPTS(*RESDECPOS)
-     H EXTBININT(*YES)
-      *===============================================================*
-      *
-      * ------------------------------------
-      *  Type Definitions
-      * ------------------------------------
-      /if not defined(*V5R2M0)
-     D resultSet_t     DS                  template   qualified
-     D  selectedPath                       like(ifs_path_t)
-     D  msg                                like(msg_t   )
-     D  numE                         10I 0
-     D  entry                              like(entry_t) dim(10)
-      *
-     D entry_t         DS                  template   qualified
-     D  type                               like(ifs_type_t)
-     D  path                               like(ifs_path_t)
-      /else
-     D resultSet_t     DS                  template   qualified
-     D  selectedPath                       like(ifs_path_t)
-     D  msg                                likeds(msg_t   )
-     D  numE                         10I 0
-     D  entry                              likeds(entry_t) dim(10)
-      *
-     D entry_t         DS                  template   qualified
-     D  type                               like(ifs_type_t)
-     D  path                               like(ifs_path_t)
-      /endif
-      *
-      * ------------------------------------
-      *  External Prototypes
-      * ------------------------------------
-      /COPY QIFS,PIFS
-      *
-      * ------------------------------------
-      *  Global Fields
-      * ------------------------------------
-      *
-      * ------------------------------------
-      *  Global Constants
-      * ------------------------------------
-      *
-      * ------------------------------------
-      *  Prototypes
-      * ------------------------------------
-      *
-     D PGM_ENTRY_POINT...
-     D                 PR                         extpgm('IFSTEST_98')
-      *
-     D main...
-     D                 PR
-      *
-      *===============================================================*
-      *  Program Entry Point
-      *===============================================================*
-      *
-     D PGM_ENTRY_POINT...
-     D                 PI
-      * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-      /FREE
+**FREE
+//===============================================================*
+//    CALL PGM(IFSTEST_04) PARM('/home/raddatz/genStrCmp/*')     *
+//===============================================================*
+//   >>PRE-COMPILER<<                                            *
+//                                                               *
+//     >>CRTCMD<<  CRTRPGMOD    MODULE(&LI/&OB) +                *
+//                              SRCFILE(&SL/&SF) +               *
+//                              SRCMBR(&SM);                     *
+//                                                               *
+//     >>COMPILE<<                                               *
+//       >>PARM<< TRUNCNBR(*NO);                                 *
+//       >>PARM<< DBGVIEW(*LIST);                                *
+//       >>PARM<< TGTRLS(*CURRENT);                              *
+//     >>END-COMPILE<<                                           *
+//                                                               *
+//     >>EXECUTE<<                                               *
+//                                                               *
+//     >>CMD<<     CRTPGM       PGM(&LI/&OB) +                   *
+//                              MODULE(&LI/&OB) +                *
+//                              ACTGRP(*NEW) +                   *
+//                              BNDSRVPGM(&LI/IFS      +         *
+//                                        &LI/BASICS1) +         *
+//                              BNDDIR(QC2LE         ) +         *
+//                              TGTRLS(*CURRENT) +               *
+//                              DETAIL(*BASIC);                  *
+//                                                               *
+//   >>END-PRE-COMPILER<<                                        *
+//===============================================================*
+CTL-OPT DEBUG OPTION(*SRCSTMT: *NODEBUGIO);
+CTL-OPT DECEDIT('0,') DATEDIT(*DMY.);
+CTL-OPT DATFMT(*ISO) TIMFMT(*ISO);
+CTL-OPT EXPROPTS(*RESDECPOS);
+CTL-OPT EXTBININT(*YES);
+//===============================================================*
+//
+// ------------------------------------
+//  Type Definitions
+// ------------------------------------
+/IF not defined(*V5R2M0)
+DCL-DS resultSet_t TEMPLATE QUALIFIED;
+  selectedPath LIKE(ifs_path_t);
+  msg          LIKE(msg_t);
+  numE         INT(10);
+  entry        LIKE(entry_t) DIM(10);
+END-DS;
 
-         main();
+DCL-DS entry_t TEMPLATE QUALIFIED;
+  type LIKE(ifs_type_t);
+  path LIKE(ifs_path_t);
+END-DS;
+/ELSE
+DCL-DS resultSet_t TEMPLATE QUALIFIED;
+  selectedPath LIKE(ifs_path_t);
+  msg          LIKEDS(msg_t);
+  numE         INT(10);
+  entry        LIKEDS(entry_t) DIM(10);
+END-DS;
 
-         *inlr = *on;
+DCL-DS entry_t TEMPLATE QUALIFIED;
+  type LIKE(ifs_type_t);
+  path LIKE(ifs_path_t);
+END-DS;
+/ENDIF
 
-         return;
+// ------------------------------------
+//  External Prototypes
+// ------------------------------------
+/COPY QIFS,PIFS
 
-      /END-FREE
-      *
-      *===============================================================*
-      *  Main procedure
-      *===============================================================*
-     P main...
-     P                 B
-      *
-     D main...
-     D                 PI
-      *
-      *  Helper fields
-     D x               S             10I 0                     inz
-     D fd              S                   like(ifs_hFile_t)   inz
-     D tempFiles       S            256A   varying dim(10)     inz
-     D dir             S            256A   varying             inz
-      *
-     D FILE_EXTENSION  C                   '.ifsTest_98'
-      * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-      /FREE
+// ------------------------------------
+//  Global Fields
+// ------------------------------------
+//
+// ------------------------------------
+//  Global Constants
+// ------------------------------------
+//
+// ------------------------------------
+//  Prototypes
+// ------------------------------------
 
-         // -----------------------------------------------------
-         //   Produce temporary files.
-         // -----------------------------------------------------
-         for x = 1 to %elem(tempFiles);
-            tempFiles(x) = %trim(f_getIfsTmpPath()) + FILE_EXTENSION;
-            fd = f_openIfsFile(tempFiles(x): O_CREAT + O_EXCL + O_WRONLY);
-            f_writeLineIfsFile(fd: 'Test Serviceprogramm IFS': 0);
-            f_closeIfsFile(fd);
-            if (x = 1);
-               dir = %trim(f_rtvIfsDirFromPath(tempFiles(x)));
-            endif;
-         endfor;
+DCL-PR PGM_ENTRY_POINT EXTPGM('IFSTEST_98');
+END-PR;
 
-         // -----------------------------------------------------
-         //   Read directory.
-         // -----------------------------------------------------
-         f_readIfsDir(dir + '/*' + FILE_EXTENSION
-                      : %paddr('f_readDirIfs_path')
-                      : cIFS_READDIR_DFT
-                      : %addr(tempFiles));
+DCL-PR main;
+END-PR;
 
-         return;
+//===============================================================*
+//  Program Entry Point
+//===============================================================*
+DCL-PI PGM_ENTRY_POINT;
+END-PI;
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-      /END-FREE
-      *
-     P main...
-     P                 E
-      *
-      *===============================================================*
-      *  Callback: f_readDirIfs_path()
-      *===============================================================*
-     P f_readDirIfs_path...
-     P                 B                   export
-      *
-     D f_readDirIfs_path...
-     D                 PI              N
-     D  i_level                      10I 0 value
-     D  i_directory                        value  like(ifs_path_t    )
-     D  i_entry                            value  like(ifs_path_t    )
-     D  i_type                             value  like(ifs_type_t    )
-     D  i_pUsrDta                      *   value
-     D  o_msg                              value  like(msg_t         )
-      *
-      *  Return value
-     D isOK            S               N   inz(cFalse)
-      *
-     D isInit          S               N   inz(cFalse) static
-     D tempFiles       S            256A   varying dim(10) based(i_pUsrDta)
-      * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-      /FREE
+main();
 
-         if (not isInit);
-            f_deleteIfsFile(tempFiles(2));
-            isInit = cTrue;
-         endif;
+*inlr = *on;
 
-         f_deleteIfsFile(%trim(i_directory) + %trim(i_entry));
+return;
 
-         isOK = cTrue;
 
-         return   isOK;
+//===============================================================*
+//  Main procedure
+//===============================================================*
+DCL-PROC main;
+  DCL-PI *N;
+  END-PI;
 
-      /END-FREE
-      *
-     P f_readDirIfs_path...
-     P                 E
-      *
+  //  Helper fields
+  DCL-S x INT(10) INZ;
+  DCL-S fd LIKE(ifs_hFile_t) INZ;
+  DCL-S tempFiles VARCHAR(256) DIM(10) INZ;
+  DCL-S dir VARCHAR(256) INZ;
+
+  DCL-C FILE_EXTENSION '.ifsTest_98';
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  // -----------------------------------------------------
+  //   Produce temporary files.
+  // -----------------------------------------------------
+for x = 1 to %elem(tempFiles);
+   tempFiles(x) = %trim(f_getIfsTmpPath()) + FILE_EXTENSION;
+   fd = f_openIfsFile(tempFiles(x): O_CREAT + O_EXCL + O_WRONLY);
+   f_writeLineIfsFile(fd: 'Test Serviceprogramm IFS': 0);
+   f_closeIfsFile(fd);
+   if (x = 1);
+      dir = %trim(f_rtvIfsDirFromPath(tempFiles(x)));
+   endif;
+endfor;
+
+  // -----------------------------------------------------
+  //   Read directory.
+  // -----------------------------------------------------
+f_readIfsDir(dir + '/*' + FILE_EXTENSION
+             : %paddr('f_readDirIfs_path')
+             : cIFS_READDIR_DFT
+             : %addr(tempFiles));
+
+return;
+
+
+END-PROC MAIN;
+
+//===============================================================*
+//  Callback: f_readDirIfs_path()
+//===============================================================*
+DCL-PROC f_readDirIfs_path EXPORT;
+  DCL-PI *N IND;
+    i_level     INT(10) VALUE;
+    i_directory LIKE(ifs_path_t) VALUE;
+    i_entry     LIKE(ifs_path_t) VALUE;
+    i_type      LIKE(ifs_type_t) VALUE;
+    i_pUsrDta   POINTER VALUE;
+    o_msg       LIKE(msg_t) VALUE;
+  END-PI;
+
+  //  Return value
+  DCL-S isOK IND INZ(cFalse);
+
+  DCL-S isInit IND INZ(cFalse) STATIC;
+  DCL-S tempFiles VARCHAR(256) DIM(10) BASED(i_pUsrDta);
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+if (not isInit);
+   f_deleteIfsFile(tempFiles(2));
+   isInit = cTrue;
+endif;
+
+f_deleteIfsFile(%trim(i_directory) + %trim(i_entry));
+
+isOK = cTrue;
+
+return   isOK;
+
+
+END-PROC;
