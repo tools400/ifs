@@ -6,7 +6,7 @@ IFS is service program that offers services for reading and writing IFS files an
 
 Dependencies:
 
-- BASICS1
+- [BASICS1](https://github.com/tools400/basics1)
 
 ## Installation
 
