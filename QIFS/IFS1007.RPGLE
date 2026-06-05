@@ -1,8 +1,8 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1007
+// Datenstruktur für Message-ID : IFS1007
 
-// &1[1007] Fehler beim Setzen der Gre der IFS-Datei '&2' au
+// &1[1007] Fehler beim Setzen der Größe der IFS-Datei '&2' au
 
 dcl-ds IFS1007;
   IFS10071 char(001) inz(*blanks);

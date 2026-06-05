@@ -1,6 +1,6 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1017
+// Datenstruktur für Message-ID : IFS1017
 
 // &1[1017] Fehler beim Lesen aus dem Verzeichnis '&2' aufgetr
 

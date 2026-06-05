@@ -1,8 +1,8 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1025
+// Datenstruktur für Message-ID : IFS1025
 
-// &1[1025] Fehler beim Abrufen der Objektberechtigungen fr d
+// &1[1025] Fehler beim Abrufen der Objektberechtigungen für d
 
 dcl-ds IFS1025;
   IFS10251 char(001) inz(*blanks);

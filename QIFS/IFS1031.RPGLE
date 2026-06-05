@@ -1,8 +1,8 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1031
+// Datenstruktur für Message-ID : IFS1031
 
-// &1[1031] Fehler beim Lschen des IFS-Verzeichnis '&2' aufge
+// &1[1031] Fehler beim Löschen des IFS-Verzeichnis '&2' aufge
 
 dcl-ds IFS1031;
   IFS10311 char(001) inz(*blanks);

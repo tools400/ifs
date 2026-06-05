@@ -1,8 +1,8 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1023
+// Datenstruktur für Message-ID : IFS1023
 
-// &1[1023] Fehler beim Erstellen eines temporren Pfadnamens
+// &1[1023] Fehler beim Erstellen eines temporären Pfadnamens
 
 dcl-ds IFS1023;
   IFS10231 char(001) inz(*blanks);

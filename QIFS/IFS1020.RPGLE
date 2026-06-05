@@ -1,8 +1,8 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1020
+// Datenstruktur für Message-ID : IFS1020
 
-// &1[1020] Fehler beim Schlieen des Verzeichnis '&2' aufgetr
+// &1[1020] Fehler beim Schließen des Verzeichnis '&2' aufgetr
 
 dcl-ds IFS1020;
   IFS10201 char(001) inz(*blanks);

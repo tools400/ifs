@@ -1,6 +1,6 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1004
+// Datenstruktur für Message-ID : IFS1004
 
 // &1[1004] Fehler beim Lesen aus der IFS-Datei '&2' aufgetret
 

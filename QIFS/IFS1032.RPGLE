@@ -1,6 +1,6 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1032
+// Datenstruktur für Message-ID : IFS1032
 
 // &1[1032] Das angegebene Verzeichnis '&2' existiert bereits.
 

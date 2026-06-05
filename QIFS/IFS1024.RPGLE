@@ -1,8 +1,8 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1024
+// Datenstruktur für Message-ID : IFS1024
 
-// &1[1024] Ungltige Pfadangabe.
+// &1[1024] Ungültige Pfadangabe.
 
 dcl-ds IFS1024;
   IFS10241 char(001) inz(*blanks);

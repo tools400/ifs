@@ -1,8 +1,8 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1005
+// Datenstruktur für Message-ID : IFS1005
 
-// &1[1005] Fehler beim Lschen der IFS-Datei '&2' aufgetreten
+// &1[1005] Fehler beim Löschen der IFS-Datei '&2' aufgetreten
 
 dcl-ds IFS1005;
   IFS10051 char(001) inz(*blanks);

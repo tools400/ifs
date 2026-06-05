@@ -1,6 +1,6 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1029
+// Datenstruktur für Message-ID : IFS1029
 
 // &1[1029] Das aktuelle Verzeichnis konnte nicht ermittelt we
 

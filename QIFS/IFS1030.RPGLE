@@ -1,6 +1,6 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1030
+// Datenstruktur für Message-ID : IFS1030
 
 // &1[1030] Das aktuelle Verzeichnis konnte nicht auf '&1' ge
 

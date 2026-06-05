@@ -1,8 +1,8 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1019
+// Datenstruktur für Message-ID : IFS1019
 
-// &1[1019] Fehler beim ffnen des Verzeichnis '&2' aufgetrete
+// &1[1019] Fehler beim Öffnen des Verzeichnis '&2' aufgetrete
 
 dcl-ds IFS1019;
   IFS10191 char(001) inz(*blanks);

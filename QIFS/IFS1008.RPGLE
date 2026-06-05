@@ -1,6 +1,6 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1008
+// Datenstruktur für Message-ID : IFS1008
 
 // &1[1008] Fehler beim Setzen des Schreib-/Lesezeigers der IF
 

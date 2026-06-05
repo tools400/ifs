@@ -1,8 +1,8 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1016
+// Datenstruktur für Message-ID : IFS1016
 
-// &1[1016] Pufferberlauf beim Lesen aus der IFS Datei '&2'
+// &1[1016] Pufferüberlauf beim Lesen aus der IFS Datei '&2'
 
 dcl-ds IFS1016;
   IFS10161 char(001) inz(*blanks);

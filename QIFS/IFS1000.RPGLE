@@ -1,8 +1,8 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1000
+// Datenstruktur für Message-ID : IFS1000
 
-// &1[1000] Fehler beim ffnen der IFS-Datei '&2' mit Fehlerco
+// &1[1000] Fehler beim Öffnen der IFS-Datei '&2' mit Fehlerco
 
 dcl-ds IFS1000;
   IFS10001 char(001) inz(*blanks);

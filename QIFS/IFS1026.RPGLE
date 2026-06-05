@@ -1,6 +1,6 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1026
+// Datenstruktur für Message-ID : IFS1026
 
 // &1[1026] Verzeichnis konnte nicht erstellt werden. Der Fehl
 

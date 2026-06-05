@@ -1,6 +1,6 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1021
+// Datenstruktur für Message-ID : IFS1021
 
 // &1[1021] Fehler beim Ermitteln der Erstellungszeit der IFS-
 

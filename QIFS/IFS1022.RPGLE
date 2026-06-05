@@ -1,8 +1,8 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1022
+// Datenstruktur für Message-ID : IFS1022
 
-// &1[1022] Fehler beim Ermitteln der Zeit der letzten nderun
+// &1[1022] Fehler beim Ermitteln der Zeit der letzten Änderun
 
 dcl-ds IFS1022;
   IFS10221 char(001) inz(*blanks);

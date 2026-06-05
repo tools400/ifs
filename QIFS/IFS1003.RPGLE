@@ -1,6 +1,6 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1003
+// Datenstruktur für Message-ID : IFS1003
 
 // &1[1003] Fehler beim Verschieben der IFS-Datei '&2' nach '&
 

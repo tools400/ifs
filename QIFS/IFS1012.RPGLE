@@ -1,6 +1,6 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1012
+// Datenstruktur für Message-ID : IFS1012
 
 // &1[1012] IFS-Datei nicht vorhanden.
 

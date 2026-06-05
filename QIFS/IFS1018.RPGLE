@@ -1,6 +1,6 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1018
+// Datenstruktur für Message-ID : IFS1018
 
 // &1[1018] Fehler beim Abrufen der Attribute der Datei '&2' a
 

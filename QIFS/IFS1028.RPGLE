@@ -1,6 +1,6 @@
 **free
 //---------------------------------------------------------------
-// Datenstruktur fr Message-ID : IFS1028
+// Datenstruktur für Message-ID : IFS1028
 
 // &1[1028] Fehler bei der Ermittlung der eindeutigen Datei-ID
 
