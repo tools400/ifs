@@ -1,6 +1,6 @@
 # IFS - A Tools/400 Service Program
 
-IFS is service program that offers services for reading and writing IFS files and directories.
+IFS is a service program that offers services for reading and writing IFS files and directories.
 
 ## Dependencies
 
